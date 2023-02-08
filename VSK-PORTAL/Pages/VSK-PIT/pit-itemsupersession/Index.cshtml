@@ -1,0 +1,60 @@
+﻿@page "/item_ss/lists"
+
+@{
+    ViewData["Script"] = "apps/pit/pit-opt-supersession-lists.js";
+
+    ViewData["Title"] = "Index";
+    ViewData["Content-Title"] = "Item Supersession";
+    ViewData["Content-Title-Page"] = "Item Supersession List";
+
+}
+
+@* container opened *@
+<div class="container">
+
+    @* subheader *@
+    <div class="breadcrumb-header justify-content-between">
+
+        @* breadcrumb *@
+        <div class="my-auto">
+            <div class="d-flex">
+                <h4 class="content-title mb-0 my-auto">@ViewData["Content-Title"]</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ @ViewData["Content-Title-Page"]</span>
+            </div>
+        </div>
+        @* breadcrumb *@
+        @* action *@
+        <div class="d-flex my-xl-auto right-content">
+            <div class="mb-3 mb-xl-0">
+                @*<button id="btn-item_create" class="btn btn-success btn-with-icon btn-block" data-toggle="modal" data-target="#modal-frm_data"><i class="typcn typcn-document-add"></i> New Item</button>*@
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="typcn typcn-document-add"></i> New Item
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" id="btn-item_create" data-toggle="modal" data-target="#modal-frm_data">New Item Supersession</a>
+                        <a class="dropdown-item" href="#" id="btn-detail-item_create" data-toggle="modal" data-target="#modal-cte-detail">New Item Detail</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        @* action *@
+
+    </div>
+    @* subheader *@
+
+    @* datatables *@
+    <div id="card-datatables" class="row">
+        <partial name="~/Pages/VSK-PIT/pit-itemsupersession/List.cshtml" />
+    </div>
+    @* datatables *@
+
+    @* modal form *@
+    <div id="card-form" class="row">
+        <partial name="~/Pages/VSK-PIT/pit-itemsupersession/Form.cshtml" />
+    </div>
+    @* modal form *@
+
+
+</div>
+@* Container closed *@

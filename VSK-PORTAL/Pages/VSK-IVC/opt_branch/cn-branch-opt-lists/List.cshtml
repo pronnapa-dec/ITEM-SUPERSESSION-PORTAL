@@ -1,0 +1,100 @@
+﻿<div class="col-12 col-sm-12">
+    <div class="card">
+        <div class="card-header pb-0">
+            <h5 class="card-title mb-0 pb-0">@ViewData["Content-Title-Page"] List</h5>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" id="frm_search" name="frm_search" autocomplete="off">
+
+                <div class="row row-sm">
+                    <div class="col-lg-3">
+                        <label for="cn_date">วันที่</label>
+                        <div class="input-group date">
+                            <input class="form-control date-picker" id="cn_date" name="cn_date" type="text" value="">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="la la-calendar-check-o"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="salefile_number_search">เลขที่อ้างอิง</label>
+                        <input type="text" class="form-control" id="cn_pre_job_jobno_search" name="cn_pre_job_jobno_search" value="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="salefile_invcode_search">รหัสลูกค้า</label>
+                        <input type="text" class="form-control" id="salefile_invcode_search" name="salefile_invcode_search" value="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="branch">สาขา</label>
+                        <select class="form-control" id="branch" name="branch" data-width="100%" placeholder="เลือกสาขา">
+                            <option value="" selected>--select--</option>
+                            <option value="VSK">VSM & VSK</option>
+                            <option value="VSF">VSF</option>
+                            <option value="KLH">KLH</option>
+                            <option value="LLK">LLK</option>
+                            <option value="NWM">NWM</option>
+                            <option value="LKS">LKS & KSW</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row row-sm mg-t-15">
+                    <div class="col-lg-3">
+                        <label for="salefile_number_search">เลขที่ใบงาน</label>
+                        <input type="text" class="form-control" id="salefile_number_search" name="salefile_number_search" value="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="salefile_number_search">Barcode</label>
+                        <input type="text" class="form-control" id="barcode" name="barcode" value="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="cn_comment">สาเหตุ</label>
+                        <select class="form-control cn_comment" id="cn_comment" name="cn_comment" data-width="100%">
+                            <option value="">-- เลือกสาเหตุการรับคืน --</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="created_by_search">บันทึกโดย</label>
+                        <input type="text" class="form-control" id="created_by_search" name="created_by_search" value="">
+                    </div>
+                </div>
+
+                <div class="row row-sm mg-t-15">
+                    <div class="col-md-3">
+                        <label for="job_status_search">สถานะ</label>
+                        <select class="form-control" id="job_status_search" name="job_status_search" data-width="100%">
+                            <option value="">-- เลือกสถานะ --</option>
+                            <option value="open">Open - รับเรื่อง </option>
+                            <option value="on_process">On Process - กำลังดำเนินการ</option>
+                            <option value="receive">Receive - รับสินค้า</option>
+                            <option value="complete">Complete - สำเร็จ</option>
+                            <option value="cancel">Cancel - ยกเลิกสินค้า </option>
+                            <option value="reject">Reject - ยกเลิกสินค้า </option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cn_pre_job_assige_search">ผู้รับผิดชอบ</label>
+                        <select class="form-control" id="cn_pre_job_assige_search" name="cn_pre_job_assige_search" data-width="100%">
+                            <option value="">-- ทั้งหมด --</option>
+                            <option value="TRP">TRP</option>
+                            <option value="IVC">IVC</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group mb-0 mt-3 justify-content-end" align="right">
+                    <div align="right">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                        <button type="button" id="btn-export" class="btn btn-success">&nbsp;&nbsp;Export&nbsp;&nbsp;</button>&nbsp;
+                    </div>
+                </div>
+            </form>
+            <div class="border-top my-3"></div>
+            <div class="table-responsive mg-t-20">
+                <table id="tbl-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap"></table>
+            </div>
+        </div>
+    </div>
+</div>

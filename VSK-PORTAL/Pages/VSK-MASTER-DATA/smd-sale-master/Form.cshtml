@@ -1,0 +1,93 @@
+﻿<!-- Scroll with content modal -->
+<form id="frm_data" name="frm_data" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">@ViewData["Content-Title-Page"] Form</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">รหัสพนักงานขาย <span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control uppercase" id="sale_code" name="sale_code" placeholder="" value="" maxlength="2" required data-parsley-error-message="กรุณากรอกรหัสพนักงานขาย">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">ชื่อพนักงาน <span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="sale_name" name="sale_name" placeholder="" value="" required data-parsley-error-message="กรุณากรอกชื่อพนักงาน">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">โทรศัพท์ </label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control numbers sale_tel" maxlength="2" name="sale_tel" id="sale_tel" value="" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">รายละเอียด</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="sale-descrip" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">Sale group <span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="col-md-9">
+                                <select class="form-control" id="sale-group" required data-parsley-error-message="กรุณาเลือก Sale Group">
+                                    <option value="">--- Please Select ---</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">Branch</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select class="form-control" id="sale-branch" >
+                                    <option value="">--- Please Select ---</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button id="btn-save_exit" class="btn ripple btn-primary btn-save_form" data-action="save_exit" type="submit">Save</button>
+                    @*<button id="btn-save_new" class="btn ripple btn-success btn-save_form d-none" data-action="save_new" type="submit">Save & New</button>*@
+                    <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--End Scroll with content modal -->
+</form>

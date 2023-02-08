@@ -1,0 +1,43 @@
+﻿<div class="col-12 col-sm-12">
+    <div class="card">
+        <div class="card-header pb-0">
+            <h5 class="card-title mb-0 pb-0">@ViewData["Content-Title-Page"] List</h5>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" id="frm_search2" name="frm_search2" autocomplete="off">
+                <div class="row col-sm-12">
+                    <div class="col-sm-3"><label for="search_salechannel">Sale Channel</label></div>
+                    <div class="col-sm-3"><label for="search_salegroup">Sale Group</label></div>
+                </div>
+
+                <div class="row col-sm-12 mg-b-5">
+                    <div class="col-sm-3 sel2 div_search_salechannel">
+                        <select class="search_salechannel tx-left" id="search_salechannel" name="search_salechannel" style="width: 100%;" required data-parsley-error-message="ชื่อบริษัทขนส่งเอกชน"><option value="">Please select..</option></select>
+                    </div>
+                    <div class="col-sm-3 sel2 div_search_salegroup">
+                        <select class="search_salegroup tx-left" id="search_salegroup" name="search_salegroup" style="width: 100%;"><option value="">Please select..</option></select>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="reset" id="btn_reset" name="btn_reset" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+
+                @*<div class="form-group mb-0 mt-3 justify-content-end">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="reset" id="btn_reset" name="btn_reset" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>*@
+
+            </form>
+
+            <div class="border-top my-3"></div>
+
+            <div class="mg-t-20">
+                <table id="tbl-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

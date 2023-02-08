@@ -1,0 +1,207 @@
+﻿@page "/Login"
+@model WEB.Pages.LoginModel
+
+@{
+
+    string currentDir = System.IO.Directory.GetCurrentDirectory();
+    string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+    //>>>วิธีใช้งานจากที่บ้าน/ผ่าน VPN เอาคอมเม้น Line 8 ออก แล้วคอมเม้น Line 11 ไว้<<<
+    //string DomainName = System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
+
+    //>>>วิธีใช้งานจากที่บ้าน/ผ่าน VPN เอาคอมเม้น Line 8 ออก แล้วคอมเม้น Line 11 ไว้<<<
+    //string DomainName = System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
+
+    string DomainName = "";
+}
+
+@{
+    Layout = null;
+}
+
+@{
+
+    ViewData["Title"] = "Login";
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="Keywords" content="admin,admin dashboard,admin dashboard template,admin panel template,admin template,admin theme,bootstrap 4 admin template,bootstrap 4 dashboard,bootstrap admin,bootstrap admin dashboard,bootstrap admin panel,bootstrap admin template,bootstrap admin theme,bootstrap dashboard,bootstrap form template,bootstrap panel,bootstrap ui kit,dashboard bootstrap 4,dashboard design,dashboard html,dashboard template,dashboard ui kit,envato templates,flat ui,html,html and css templates,html dashboard template,html5,jquery html,premium,premium quality,sidebar bootstrap 4,template admin bootstrap 4" />
+
+    <!-- Title -->
+    <title> @Model.site_title</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!-- Icons css -->
+    <link href="~/assets/css/icons.css" rel="stylesheet">
+
+    <!--  Right-sidemenu css -->
+    <link href="~/assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+    <!--  Custom Scroll bar-->
+    <link href="~/assets/plugins/mscrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!--  Left-Sidebar css -->
+    <link rel="stylesheet" href="~/assets/css/sidemenu.css">
+
+    <!--- Style css --->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+
+    <!--- Dark-mode css --->
+    <link href="~/assets/css/style-dark.css" rel="stylesheet">
+
+    <!---Skinmodes css-->
+    <link href="~/assets/css/skin-modes.css" rel="stylesheet" />
+
+    <!--- Animations css-->
+    <link href="~/assets/css/animate.css" rel="stylesheet">
+
+
+</head>
+<body class="main-body">
+
+    <!-- Loader -->
+    <div id="global-loader" style="opacity:0.5;">
+        <img src="../../assets/img/loader.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+    <!-- Page -->
+    <div class="page">
+
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <!-- The image half -->
+                <div class="col-md-6 col-lg-6 col-xl-7 d-none d-md-flex bg-primary-transparent">
+                    <div class="row wd-100p mx-auto text-center">
+                        <div class="col-md-12 col-lg-12 col-xl-12 my-auto mx-auto wd-100p">
+                            <img src="../../assets/img/media/signin.png" class="my-auto ht-xl-80p wd-md-100p wd-xl-80p mx-auto" alt="logo">
+                        </div>
+                    </div>
+                </div>
+                <!-- The content half -->
+                <div class="col-md-6 col-lg-6 col-xl-5 bg-white">
+                    <div class="login d-flex align-items-center py-2">
+                        <!-- Demo content-->
+                        <div class="container p-0">
+                            <div class="row">
+                                <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
+                                    <div class="card-sigin">
+                                        <div class="mb-5 d-flex"> <a href="javascript:void(0)"><img src="@Model.site_logo" class="sign-favicon ht-50" alt="logo" style="width:130px; height:89px;"></a></div>
+                                        <div class="card-sigin" style="margin-top:-30px;">
+                                            <div class="main-signup-header">
+                                                <h2>VSK Web Engine</h2>
+                                                <h5 class="font-weight-semibold mb-4">Please sign in to continue.</h5>
+                                                <form id="frm_signin" action="#" autocomplete="off">
+
+                                                    <div id="block-chang_domain" class="form-group d-none">
+                                                        <label>Domain</label>
+                                                        <select class="form-control select2" id="domain_id" required></select>
+                                                    </div>
+                                                    <div class="form-group d-none">
+                                                        <label>Application</label>
+                                                        <select id="auth_application_list" class="form-control select2" required>
+                                                            <option label="Select Application"></option>
+                                                        </select>
+                                                    </div>
+
+                                                    @if (DomainName != "")
+                                                    {
+                                                        <div class="form-group">
+                                                            <label>Username</label> <input class="form-control" id="user_username" placeholder="Enter your Username" type="text" value="@Environment.UserName" required readonly>
+                                                        </div>
+                                                        <div id="block-chang_user" class="form-group  d-none">
+                                                            <label>Password</label> <input class="form-control" id="user_password" placeholder="Enter your password" type="password" required>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="form-group">
+                                                            <label>Username</label> <input class="form-control" id="user_username" placeholder="Enter your Username" type="text" value="@Environment.UserName" required>
+                                                        </div>
+                                                        <div id="block-chang_user" class="form-group">
+                                                            <label>Password</label> <input class="form-control" id="user_password" placeholder="Enter your password" type="password" required>
+                                                        </div>
+                                                    }
+
+                                                    <button id="btn-submit" type="submit" class="btn btn-main-primary btn-block">Sign In</button>
+
+                                                    @if (DomainName != "")
+                                                    {
+                                                        <div class="row row-xs">
+                                                            <div class="col-sm-6">
+                                                                <button id="btn-change_user" class="btn btn-success btn-block"><i class="fas fa-user-friends"></i> Change User </button>
+                                                            </div>
+                                                            <div class="col-sm-6 mg-t-10 mg-sm-t-0">
+                                                                <button id="btn-change_domain" class="btn btn-danger btn-block"><i class="fas fa-globe"></i> Change Domain</button>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End -->
+                    </div>
+                </div><!-- End -->
+            </div>
+        </div>
+
+    </div>
+    <!-- End Page -->
+    <!-- Site Config -->
+    <script src="~/js/site.js"></script>
+    <!-- JQuery min js -->
+    <script src="~/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Firebase -->
+    <script src="~/lib/firebase/firebase-app.js"></script>
+    <script src="~/lib/firebase/firebase-auth.js"></script>
+    <script src="~/lib/firebase/firebase-analytics.js"></script>
+    <script src="~/lib/firebase/firebase-firestore.js"></script>
+    <script src="~/lib/firebase/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+    <script src="~/lib/firebase/firebase-init.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="~/assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="~/assets/plugins/moment/moment.js"></script>
+
+    <!-- loadingoverlay min js by tan-->
+    <script src="~/assets/js/loadingoverlay.min.js"></script>
+
+    <!-- eva-icons js -->
+    <script src="~/assets/js/eva-icons.min.js"></script>
+
+    <!-- Rating js-->
+    <script src="~/assets/plugins/rating/jquery.rating-stars.js"></script>
+    <script src="~/assets/plugins/rating/jquery.barrating.js"></script>
+
+    <!-- custom js -->
+    <script src="~/assets/js/custom.js"></script>
+
+    <script type="text/javascript">
+
+        const domain = 'VSKAUTOPARTS.COM';
+
+    </script>
+
+    <script src="~/lib/init-auth_dm.js"></script>
+
+</body>
+</html>

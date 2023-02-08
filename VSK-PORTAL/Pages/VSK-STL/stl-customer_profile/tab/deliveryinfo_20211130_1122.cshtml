@@ -1,0 +1,554 @@
+﻿<div class="tab-pane" id="deliveryinfo">
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5 col-xl-5 col-xs-5 col-sm-5">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลการขนส่งสินค้า
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สาย</label>
+                                    <input class="form-control form-control-sm" placeholder="สาย" type="text" id="emmas_kline" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sub Route</label>
+                                    <input class="form-control form-control-sm" placeholder="Sub. Route" type="text" id="customer_delivery_subroute" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Priority Type</label>
+                                    <input class="form-control form-control-sm" placeholder="Priority Type" type="text" id="customer_delivery_prioritytype" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เวลาขนส่งมาตราฐาน</label>
+                                    <input class="form-control form-control-sm" placeholder="เวลาขนส่งมาตราฐาน" type="text" id="customer_delivery_stdtime" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">บริษัทขนส่งเอกชน</label>
+                                    <input class="form-control form-control-sm" placeholder="บริษัทขนส่งเอกชน" type="text" id="customer_delivery_pds" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            @*<div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;" id="customer_ax_trponhold">Invoice and delivery on hold</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="badge badge-success">Yes</span>&nbsp;&nbsp;<span class="badge badge-secondary">No</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="badge badge-secondary">Yes</span>&nbsp;&nbsp;<span class="badge badge-danger">No</span>
+                                </div>
+                            </div>*@
+                        </div>
+
+                        <div class="col-md-7 col-xl-7 col-xs-7 col-sm-7">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                &nbsp;
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Delivery Charged by</label>
+                                    <input class="form-control form-control-sm" placeholder="Delivery Charged by" type="text" id="customer_delivery_deliverychargedby" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Return Charged by</label>
+                                    <input class="form-control form-control-sm" placeholder="Return Charged by" type="text" id="customer_delivery_returnchargedby" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Delivery Window</label>
+                                    <input class="form-control form-control-sm" placeholder="Delivery Window" type="text" id="customer_delivery_deliverywindow" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Delivery Appointment</label>
+                                    <input class="form-control form-control-sm" placeholder="Delivery Appointment" type="text" id="customer_delivery_deliveryappointment" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Delivery Time</label>
+                                    <input class="form-control form-control-sm" placeholder="Delivery Time" type="text" id="customer_delivery_deliverytime" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Lunch Break</label>
+                                    <input class="form-control form-control-sm" placeholder="Lunch Break" type="text" id="customer_delivery_deliverylunchbreak" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <table border="0" width="25%">
+                                        <tr>
+                                            <td style="width: 10%"><label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">Delivery day</label></td>
+                                            <td style="width: 15%">
+                                                <label class="ckbox mg-b-8"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: 0px;">เลือกทั้งหมด</span></label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-5 mg-l-0">
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <table border="0" width="70%">
+                                        <tr>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันอาทิตย์</span></label>
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันจันทร์</span></label>
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันอังคาร</span></label>
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันพุธ</span></label>
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันพฤหัสบดี</span></label>
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันศุกร์</span></label>
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <label class="ckbox"><input type="checkbox" id=""><span class="tx-12 tx-medium tx-gray-700" style="margin-left: -4px;">วันเสาร์</span></label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<<<<<<< .mine
+||||||| .r67
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลสถานที่จัดส่งสินค้าและข้อมูลติดต่อ
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">วงเงินเครดิต</label>
+                                    <input class="form-control form-control-sm" placeholder="วงเงินเครดิต" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">วงเงินชั่วคราว</label>
+                                    <input class="form-control form-control-sm" placeholder="วงเงินชั่วคราว" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ยอดค้างชำระ</label>
+                                    <input class="form-control form-control-sm" placeholder="ยอดค้างชำระ" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ยอดค้างชำระ VAT</label>
+                                    <input class="form-control form-control-sm" placeholder="ยอดค้างชำระ VAT" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                &nbsp;
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">VAT</label>
+                                    <input class="form-control form-control-sm" placeholder="VAT" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Credit rating</label>
+                                    <input class="form-control form-control-sm" placeholder="Credit rating" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เครดิต (วัน)</label>
+                                    <input class="form-control form-control-sm" placeholder="เครดิต" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Account statement</label>
+                                    <input class="form-control form-control-sm" placeholder="Account statement" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Mandatory credit limit</label>
+                                    <input class="form-control form-control-sm" placeholder="Mandatory credit limit" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <!--<div class="row">
+                    <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                        <div class="main-content-label mg-b-5 tx-14">
+                            ข้อมูลสถานที่จัดส่งสินค้าและข้อมูลติดต่อ
+                        </div>
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ที่อยู่</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="ที่อยู่" id="cus_address" name="cus_address" style="margin-top: -3px;"required>
+                            </div>
+                            <div class="col-lg mg-t-10 mg-lg-t-0">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">จังหวัด</label>
+                                <select class="form-control form-control-sm select2 provicne" id="provicne" name="provicne" style="width: 100%;" style="margin-top: -3px;"required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row row-sm mg-t-15">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">อำเภอ</label>
+                                <select class="form-control form-control-sm select2 amphur" id="amphur" name="amphur" style="width: 100%;" style="margin-top: -3px;" required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                            <div class="col-lg mg-t-10 mg-lg-t-0">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;"> ตำบล</label>
+                                <select class="form-control form-control-sm select2 district" id="district" name="district" style="width: 100%;" style="margin-top: -3px;"required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                        <div class="main-content-label mg-b-5 tx-14">
+                            &nbsp;
+                        </div>
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">รหัสไปษณีย์</label>
+                                <input class="form-control form-control-sm" placeholder="รหัสไปษณีย์" type="text" id="postcode" name="postcode" style="margin-top: -3px;" required>
+                            </div>
+
+                            <div class="col-lg mg-t-10 mg-lg-t-0">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เรื่มต้น</label>
+                                <div class="col-auto">
+                                    <div class="main-toggle-group-demo" style="padding: 0.375rem 0.75rem; margin-top: -3px;">
+                                        <div class="main-toggle main-toggle-success default-switches">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-portlet__body ">
+                            <div class="form-group form-group-sm row d-flex justify-content-center">
+                                <div class="col-1">
+                                    <div class="input-group btn-create">
+                                        <button id="btn-item-create" type="submit" class="btn btn-success btn-with-icon btn-block btn-save_form">ADD +</button>
+                                    </div>-->
+                    <!-- input-group -->
+                    <!--<div class="input-group btn-edit hide">
+                        <button id="btn-edit" type="submit" class="btn btn-success btn-with-icon btn-block">Edit</button>
+                    </div>-->
+                    <!-- input-group -->
+                    <!--</div>
+                    <div class="col-1">
+                        <div class="input-group">
+                            <button id="btn-item_reset" type="reset" class="btn btn-light btn-with-icon btn-block">Cancel</button>
+                        </div>-->
+                    <!-- input-group -->
+                    <!--</div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>-->
+
+                    <form class="form-horizontal" id="frm_cus" name="frm_cus" autocomplete="off">
+                        <div class="main-content-label mg-b-5 tx-14">
+                            ที่อยู่จัดส่ง
+                        </div>
+                        <div class="d-flex my-xl-auto right-content">
+                            @*<h5 class="card-title mb-0 pb-0">ONL/ISR/CPS</h5>*@
+                        </div>
+                        <div class="kt-portlet__body ">
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg ">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ที่อยู่</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="ที่อยู่" id="cus_address" name="cus_address" style="margin-top: -3px;" required>
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">จังหวัด</label>
+                                    <select class="form-control form-control-sm select2 provicne" id="provicne" name="provicne" style="width: 100%;" style="margin-top: -3px;" required>
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">อำเภอ</label>
+                                    <select class="form-control form-control-sm select2 amphur" id="amphur" name="amphur" style="width: 100%;" style="margin-top: -3px;" required>
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">จังหวัด</label>
+                                    <select class="form-control form-control-sm select2 provicne" id="provicne" name="provicne" style="width: 100%;" style="margin-top: -3px;" required>
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">อำเภอ</label>
+                                    <select class="form-control form-control-sm select2 amphur" id="amphur" name="amphur" style="width: 100%;" style="margin-top: -3px;" required>
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;"> ตำบล</label>
+                                    <select class="form-control form-control-sm select2 district" id="district" name="district" style="width: 100%;" style="margin-top: -3px;" required>
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">รหัสไปษณีย์</label>
+                                    <input class="form-control form-control-sm" placeholder="รหัสไปษณีย์" type="text" id="postcode" name="postcode" style="margin-top: -3px;" required>
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เรื่มต้น</label>
+                                    <div class="main-toggle-group-demo" style="padding-left: 5px; margin-top: -3px;">
+                                        <div class="main-toggle main-toggle-success default-switches">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="kt-portlet__body ">
+                                <div class="form-group form-group-sm row d-flex justify-content-center">
+                                    <div class="col-1">
+                                        <div class="input-group btn-create">
+                                            <button id="btn-item-create" type="submit" class="btn btn-success btn-with-icon btn-block">ADD</button>
+                                        </div><!-- input-group -->
+                                        <div class="input-group btn-edit hide">
+                                            <button id="btn-edit" type="submit" class="btn btn-success btn-with-icon btn-block">Edit</button>
+                                        </div><!-- input-group -->
+
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="input-group">
+                                            <button id="btn-item_reset" type="reset" class="btn btn-light btn-with-icon btn-block">Cancel</button>
+                                        </div><!-- input-group -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="border-top my-3"></div>
+                    <div class="table-responsive mg-t-20">
+                        <table id="tbl-cus-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <form class="form-horizontal" id="frm_trans" name="frm_trans" autocomplete="off">
+                        <div class="breadcrumb-header justify-content-between">
+                            <div class="card-header pb-0">
+                                <h5 class="card-title">ที่อยู่ขนส่ง</h5>
+                            </div>
+                            <div class="d-flex my-xl-auto right-content">
+                                @*<h5 class="card-title mb-0 pb-0">ONL/ISR/CPS</h5>*@
+                            </div>
+                        </div>
+
+                        <div class="kt-portlet__body">
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg ">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ชื่อขนส่ง</label>
+                                    <select class="form-control  select2 tran_name" id="tran_name" name="tran_name" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกชื่อขนส่ง">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg ">
+
+                                    <label class="tx-13 tx-medium tx-gray-700" align="right">ชำระค่าขนส่ง</label>
+                                    <label class="rdiobox"><input type="radio" id="lov_deliverycost_code_1" class="lov_deliverycost_code col-form-label" name="rdio" value="1"> <span class="tx-success">ต้นทาง</span></label>
+                                    <label class="rdiobox"><input type="radio" id="lov_deliverycost_code_2" class="lov_deliverycost_code col-form-label" name="rdio" value="0" checked=""> <span class="tx-danger">ปลายทาง</span></label>
+
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เรื่มต้น</label>
+                                    <div class="main-toggle-group-demo" style="padding-left: 5px; margin-top: -3px;">
+                                        <div class="main-toggle main-toggle-success default-switches">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- 2 -->
+                        <div class="kt-portlet__body">
+                            <div class="form-group form-group-sm row d-flex justify-content-center mt-3">
+                                <div class="col-1">
+                                    <div class="input-group btn-create-trp">
+                                        <button id="btn-item-trp-create" type="submit" class="btn btn-success btn-with-icon btn-block">ADD</button>
+                                    </div><!-- input-group -->
+                                    <div class="input-group btn-edit-trp hide">
+                                        <button id="btn-edit-trp" type="submit" class="btn btn-success btn-with-icon btn-block">Edit</button>
+                                    </div><!-- input-group -->
+
+                                </div>
+                                <div class="col-1">
+                                    <div class="input-group">
+                                        <button id="btn-item-trp-cancle" type="reset" class="btn btn-light btn-with-icon btn-block">Cancel</button>
+                                    </div><!-- input-group -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="border-top my-3"></div>
+                    <div class="table-responsive mg-t-20">
+                        <table id="tbl-trp-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+=======
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลสถานที่จัดส่งสินค้าและข้อมูลติดต่อ
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">วงเงินเครดิต</label>
+                                    <input class="form-control form-control-sm" placeholder="วงเงินเครดิต" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">วงเงินชั่วคราว</label>
+                                    <input class="form-control form-control-sm" placeholder="วงเงินชั่วคราว" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ยอดค้างชำระ</label>
+                                    <input class="form-control form-control-sm" placeholder="ยอดค้างชำระ" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ยอดค้างชำระ VAT</label>
+                                    <input class="form-control form-control-sm" placeholder="ยอดค้างชำระ VAT" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                &nbsp;
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">VAT</label>
+                                    <input class="form-control form-control-sm" placeholder="VAT" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Credit rating</label>
+                                    <input class="form-control form-control-sm" placeholder="Credit rating" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เครดิต (วัน)</label>
+                                    <input class="form-control form-control-sm" placeholder="เครดิต" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Account statement</label>
+                                    <input class="form-control form-control-sm" placeholder="Account statement" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Mandatory credit limit</label>
+                                    <input class="form-control form-control-sm" placeholder="Mandatory credit limit" type="text" id="" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+
+                    <div class="main-content-label mg-b-5 tx-14">
+                        ที่อยู่จัดส่ง
+                    </div>
+
+                    <div class="table-responsive mg-t-20" style="overflow: hidden;">
+                        <table id="tbl-cus-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="1130px"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+
+                    <div class="main-content-label mg-b-5 tx-14">
+                       บริษัทขนส่งเอกชน
+                    </div>
+
+                    <div class="table-responsive mg-t-20" style="overflow: hidden;">
+                        <table id="tbl-trp-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="1130px" ></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> .r175
+</div>

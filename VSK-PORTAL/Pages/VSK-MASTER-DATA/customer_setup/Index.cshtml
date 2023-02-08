@@ -1,0 +1,71 @@
+﻿@page "/stl/master/customer_setup"
+
+@{
+    ViewData["Script"] = "apps/masterdata/customer_setup.js";
+
+    ViewData["Title"] = "Index";
+    ViewData["Content-Title"] = "Customer Setup";
+    ViewData["Content-Title-Page"] = "ลูกค้า";
+
+}
+
+@* container opened *@
+<div class="container">
+
+
+    @* subheader *@
+    <div class="breadcrumb-header justify-content-between">
+
+        @* breadcrumb *@
+        <div class="my-auto">
+            <div class="d-flex">
+                <h4 class="content-title mb-0 my-auto">@ViewData["Content-Title"]</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ @ViewData["Content-Title-Page"]</span>
+            </div>
+        </div>
+        @* breadcrumb *@
+    </div>
+    @* subheader *@
+
+    @* datatables *@
+    <div id="card-datatables" class="row scrollbar-ripe-malinka">
+        <div class="col-12 col-sm-12">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <h5 class="card-title mb-0 pb-0">@ViewData["Content-Title-Page"]</h5>
+                </div>
+                <div class="card-body">
+                    <form class="form-horizontal" id="frm_search" name="frm_search" autocomplete="off">
+                        <div class="kt-portlet__body">
+                            <div class="form-group form-group-sm row d-flex justify-content-center">
+                                <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+                                    <div class="input-group">
+                                        <input class="form-control select2" type="text" id="customer_code" placeholder="Cus No. or Customer Name" autocomplete="off"><span class="input-group-btn"><button class="btn btn-primary btn-search" type="submit"><span class="input-group-btn"><i class="fa fa-search"></i></span></button></span>
+
+                                    </div><!-- input-group -->
+                                    <div id="suggesstion-box" class="list-group" style=" display: block;z-index: 98;position: absolute; height:150px; overflow-y: scroll;">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <partial name="~/Pages/VSK-MASTER-DATA/customer_setup/Search.cshtml" />
+                    <partial name="~/Pages/VSK-MASTER-DATA/customer_setup/Form_cus_add.cshtml" />
+                    @*<partial name="~/Pages/VSK-MASTER-DATA/customer_setup/Form_transport.cshtml" />*@
+
+                </div>
+            </div>
+        </div>
+
+        @*<partial name="~/Pages/IVC/customer_setup/List.cshtml" />*@
+    </div>
+    @* datatables *@
+
+    @* modal form *@
+    <div id="card-form" class="row">
+        <partial name="~/Pages/VSK-MASTER-DATA/customer_setup/Form_transport_modal.cshtml" />
+    </div>
+    @* modal form *@
+
+</div>
+@* Container closed *@

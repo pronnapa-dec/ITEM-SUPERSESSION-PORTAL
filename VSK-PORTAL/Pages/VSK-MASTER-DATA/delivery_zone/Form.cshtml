@@ -1,0 +1,97 @@
+﻿<!-- Scroll with content modal -->
+<form id="frm_data" name="frm_data" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data" data-keyboard="false" data-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">เพิ่มข้อมูลบริษัทขนส่งเอกชน</h6>
+                    @*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h6 class="modal-title bd-danger"><strong>Warning!</strong> รหัสสินค้าซ้ำ กรุณาเปลี่ยนใหม่!</h6>*@
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="kt-portlet__body">
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สายส่ง (Route) <span class="tx-danger">*</span></label>
+                                <select class="form-control form-control-sm route" id="emmas_eline" name="emmas_eline" style="width: 100%; margin-top: -3px;" required data-parsley-error-message="กรุณาเลือกพื้นที่">
+                                    <option label="Choose one">
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg mg-t-10 mg-lg-t-0">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สายส่งย่อย (Sub Route) </label>
+                                <select class="form-control form-control-sm subroute" id="salegrch_delivery_subroute" name="salegrch_delivery_subroute" style="width: 100%; margin-top: -3px;" @*required data-parsley-error-message="กรุณาเลือกพื้นที่ย่อย"*@>
+                                    <option label="Choose one">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ชื่อบริษัทขนส่งเอกชน <span class="tx-danger">*</span></label>
+                                @*<input class="form-control form-control-sm" placeholder="ชื่อบริษัทขนส่งเอกชน" type="text" id="name_transprot" name="name_transprot" style="margin-top: -3px;" required data-parsley-error-message="ชื่อบริษัทขนส่งเอกชน">*@
+
+                                <select class="form-control form-control-sm" id="name_transprot" name="name_transprot" style="width: 100%; margin-top: -3px;" required data-parsley-error-message="กรุณาเลือกพื้นที่ย่อย">
+                                    <option label="Choose one">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="alert alert-danger check d-none" role="alert">
+                            <span class="alert-inner--icon"><i class="fe fe-info"></i></span>
+                            <span class="alert-inner--text"><strong>Warning!</strong> ชื่อขนส่งซ้ำ กรุณาเปลี่ยนใหม่!</span>
+                        </div>
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เวลาทำการ</label>
+                                @*<div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                        </div>
+                                    </div><input class="form-control" id="datetimepicker2" type="text" value="">
+                                </div>*@
+
+                            <div class="input-group mb-2 bootstrap-timepicker">
+                                <input class="form-control event-time-from" id="opening_time" type="text" value="" placeholder="HH:MM">&nbsp;&nbsp;
+                                @*<input id="opening_time" type="time" class="form-control event-time-from numbers" name="event-time-from" data-provide="timepicker" placeholder="HH:MM">&nbsp;&nbsp;*@
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">ถึง</div>
+                                </div>&nbsp;&nbsp;
+                                <input class="form-control event-time-from" id="close_time" type="text" value="" placeholder="HH:MM">&nbsp;&nbsp;
+                                @*<input id="close_time" type="time" class="form-control event-time-from numbers" name="event-time-from" data-provide="timepicker" placeholder="HH:MM">*@
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-lg">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมายเหตุ</label>
+                                <textarea class="form-control" id="remark" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="row row-sm mg-t-20">
+                            <div class="col-md-2">
+                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สถานะ</label>
+                            </div>
+                            <div class="col-auto">
+                                <label class="rdiobox"><input type="radio" id="record_status_1" class="record_status" name="rdio" value="1"> <span class="tx-success">ใช้งาน</span></label>
+                            </div>
+                            <div class="col-auto">
+                                <label class="rdiobox"><input type="radio" id="record_status_2" class="record_status" name="rdio" value="0" checked=""> <span class="tx-danger">ไม่ใช้งาน</span></label>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="btn-save_exit" class="btn ripple btn-primary btn-save_form" data-action="save_exit" type="submit">Save</button>
+                            <button id="btn-save_new" class="btn ripple btn-success btn-save_form" data-action="save_new" type="submit">Save & New</button>
+                            <button class="btn ripple btn-danger" data-dismiss="modal" type="button" style="width: 100px;">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Scroll with content modal -->
+</form>

@@ -1,0 +1,49 @@
+﻿@page "/cn_branch/job_list"
+
+@{
+    ViewData["Script"] = "apps/ivc/cn-branch-opt-lists.js";
+
+    ViewData["Title"] = "Index";
+    ViewData["Content-Title"] = "เรียกรับคืนสินค้าจากสาขา";
+    ViewData["Content-Title-Page"] = "รายการใบคืนสินค้า";
+
+}
+
+
+@* container opened *@
+<div class="container">
+
+    @* subheader *@
+    <div class="breadcrumb-header justify-content-between">
+
+        @* breadcrumb *@
+        <div class="my-auto">
+            <div class="d-flex">
+                <h4 class="content-title mb-0 my-auto">@ViewData["Content-Title"]</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ @ViewData["Content-Title-Page"]</span>
+            </div>
+        </div>
+        @* breadcrumb *@
+
+    </div>
+    @* subheader *@
+
+    @* modal form *@
+    <div id="card-form" class="row">
+        <partial name="~/Pages/VSK-IVC/opt_branch/cn-branch-opt-lists/Form.cshtml" />
+    </div>
+    @* modal form *@
+
+    @* datatables *@
+    <div id="card-datatables" class="row">
+        <partial name="~/Pages/VSK-IVC/opt_branch/cn-branch-opt-lists/List.cshtml" />
+    </div>
+    @* datatables *@
+
+    @* modal form *@
+    <div id="card-modal" class="row">
+        <partial name="~/Pages/VSK-IVC/opt_branch/cn-branch-opt-lists/List_history.cshtml" />
+    </div>
+    @* modal form *@
+
+</div>
+@* Container closed *@

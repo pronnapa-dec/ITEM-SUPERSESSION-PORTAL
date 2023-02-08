@@ -1,0 +1,79 @@
+﻿<div class="tab-pane" id="deliveryinfo">
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลการขนส่งสินค้า
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สายส่ง (Route)</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="emmas_kline" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-4">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สายส่งย่อย (Sub Route)</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="customer_delivery_subroute" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-3">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ลำดับความสำคัญ (Priority Type)</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="customer_delivery_prioritytype" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-3">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เวลาขนส่งมาตราฐาน (Std. Time)</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="customer_delivery_time" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row row-sm">
+                        <div class="col-md col-md-10 main-content-label mg-b-5 tx-14">
+                            ที่อยู่จัดส่งและวิธีขนส่ง
+                        </div>
+                        @*start edit kung 2021-12-24*@
+                        <div class="col-md col-md-2 main-content-label mg-b-5 tx-14">
+                            <button type="button" class="col-sm-12 btn btn-sm btn-primary btn-with-icon btn-block" id="btn_addcontact" data-toggle="modal" data-target="#modal-addr">เพิ่มที่อยู่จัดส่ง</button>
+                        </div>
+                        @*end edit kung 2021-12-24*@
+
+                    </div>
+                    <div class="table-responsive mg-t-20" style="overflow: hidden;">
+                        <table id="tbl-cus-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="1130px"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+
+                    <div class="main-content-label mg-b-5 tx-14">
+                       บริษัทขนส่งเอกชน
+                    </div>
+
+                    <div class="table-responsive mg-t-20" style="overflow: hidden;">
+                        <table id="tbl-trp-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="1130px" ></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+</div>

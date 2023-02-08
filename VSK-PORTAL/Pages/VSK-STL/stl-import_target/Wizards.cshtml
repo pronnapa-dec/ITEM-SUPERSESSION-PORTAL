@@ -1,0 +1,200 @@
+﻿<div class="col-lg-12 col-md-12" id="wizards">
+    <div class="card">
+        <div id="import" align="right">
+
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card  bg-primary-gradient">
+                        <div class="card-body">
+                            <div class="counter-status d-flex md-mb-0">
+                                <div class="counter-icon">
+                                    <i class="icon icon-people"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <h5 class="tx-13 tx-white-8 mb-3">ข้อมูลทั้งหมด</h5>
+                                    <h2 class="counter mb-0 text-white" id="countitem_all">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card  bg-danger-gradient">
+                        <div class="card-body">
+                            <div class="counter-status d-flex md-mb-0">
+                                <div class="counter-icon text-warning">
+                                    <i class="icon icon-rocket"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <h5 class="tx-13 tx-white-8 mb-3">ข้อมูลผิดพลาด</h5>
+                                    <h2 class="counter mb-0 text-white" id="countitem_incomplete">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card  bg-success-gradient">
+                        <div class="card-body">
+                            <div class="counter-status d-flex md-mb-0">
+                                <div class="counter-icon text-primary">
+                                    <i class="icon icon-docs"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <h5 class="tx-13 tx-white-8 mb-3">ข้อมูลสำเร็จ</h5>
+                                    <h2 class="counter mb-0 text-white" id="countitem_complete">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card  bg-warning-gradient">
+                        <div class="card-body">
+                            <div class="counter-status d-flex md-mb-0">
+                                <div class="counter-icon text-success">
+                                    <i class="icon icon-emotsmile"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <h5 class="tx-13 tx-white-8 mb-3">ข้อมูลที่ต้องแก้ไข</h5>
+                                    <h2 class="counter mb-0 text-white" id="countitem_problem">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row closed -->
+            <div id="wizard1">
+                <h3>รายการข้อมูลทั้งหมด</h3>
+                <section>
+
+                    <div class="row row-sm ">
+                        <div class="col-sm-7 col-md-6 col-lg-4">
+                            <div class="custom-file">
+                                <input class="custom-file-input" id="customFile" type="file"> <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-md-6 col-lg-8">
+                            <button type="button" id="btn_downloadtemplate" class="col-sm-2 btn btn-sm btn-primary btn-with-icon btn-block">Download Template</button>
+                        </div>
+                    </div>
+
+                    <div class="row row-sm">
+                        <div class="col-md-12">
+                            <div class="border-top my-3"></div>
+                            <div class="mg-t-20">
+                                <table id="tbl-list-temp" class="table table-responsive table-bordered table-striped  mg-b-0 text-md-nowrap ">
+                                    <thead>
+                                        <tr>
+                                            <th><div style="width: 30px;text-align:center;">#<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style="width: 60px;text-align:center;">Status<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 60px; text-align: center;'>รหัสลูกค้า<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 150px;text-align:center;'>ชื่อลูกค้า<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 45px;text-align:center;'>ปี<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 45px;text-align:center;'>เป้าขายรวม<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มกราคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กุมภาพันธ์ <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มีนาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />เมษายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />พฤษภาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มิถุนายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กรกฎาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />สิงหาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กันยายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />ตุลาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />พฤศจิกายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />ธันวาคม <br />&nbsp;</div></th>
+                                    </thead>
+                                    <tbody id="tbl-list-temp-tbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <h3>รายการที่สามารนำเข้าได้</h3>
+                <section>
+                    <div class="row row-sm">
+                        <div class="col-md-12">
+                            <div class="border-top my-3"></div>
+                            <div class="mg-t-20">
+                                <table id="tbl-list-temp" class="table table-responsive table-bordered table-striped  mg-b-0 text-md-nowrap ">
+                                    <thead>
+                                        <tr>
+                                            <th><div style="width: 30px;text-align:center;">#<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style="width: 60px;text-align:center;">Status<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 60px; text-align: center;'>รหัสลูกค้า<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 150px;text-align:center;'>ชื่อลูกค้า<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 45px;text-align:center;'>ปี<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 45px;text-align:center;'>เป้าขายรวม<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มกราคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กุมภาพันธ์ <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มีนาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />เมษายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />พฤษภาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มิถุนายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กรกฎาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />สิงหาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กันยายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />ตุลาคม <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />พฤศจิกายน <br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />ธันวาคม <br />&nbsp;</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <h3>รายการที่นำเข้าสำเร็จแล้ว</h3>
+                <section>
+                    <div class="row row-sm">
+                        <div class="col-md-12">
+                            <div class="border-top my-3"></div>
+                            <div class="mg-t-20">
+                                <table id="tbl-list-temp" class="table table-responsive table-bordered table-striped  mg-b-0 text-md-nowrap ">
+                                    <thead>
+                                        <tr>
+                                            <th><div style="width: 30px;text-align:center;">#<br />&nbsp;</div></th>
+                                            <th><div style="width: 60px;text-align:center;">Status<br />&nbsp;</div></th>
+                                            <th><div style='width: 60px; text-align: center;'>รหัสลูกค้า<br />&nbsp;</div></th>
+                                            <th><div style='width: 150px;text-align:center;'>ชื่อลูกค้า<br />&nbsp;</div></th>
+                                            <th><div style='width: 45px;text-align:center;'>ปี<br />&nbsp;;</div></th>
+                                            <th><div style='width: 45px;text-align:center;'>เป้าขายรวม<br />&nbsp;<br />&nbsp;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มกราคม</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กุมภาพันธ์</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มีนาคม</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />เมษายน;</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />พฤษภาคม</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />มิถุนายน</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กรกฎาคม</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />สิงหาคม</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />กันยายน</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />ตุลาคม</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />พฤศจิกายน</div></th>
+                                            <th><div style='width: 90px;text-align:center;'>เป้าขาย<br />ธันวาคม</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <div class="border-top my-3"></div>
+        <div class="table-responsive mg-t-20">
+            <table id="tbl-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap"></table>
+        </div>
+    </div>
+</div>

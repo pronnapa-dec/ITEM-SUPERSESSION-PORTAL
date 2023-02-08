@@ -1,0 +1,598 @@
+﻿<!-- Scroll with content modal -->
+<form id="frm_data" name="frm_data" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data" data-keyboard="false" data-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:1250px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">@ViewData["Content-Title-Page"] Form</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary tabs-style-2">
+                        <div class=" tab-menu-heading">
+                            <div class="tabs-menu1">
+                                <!-- Tabs -->
+                                <ul class="nav panel-tabs main-nav-line">
+                                    <li><a href="#customerinfo" class="nav-link active" data-toggle="tab">ข้อมูลลูกค้า</a></li>
+                                    <li><a href="#saleinfo" class="nav-link" data-toggle="tab">ข้อมูลด้านการขาย</a></li>
+                                    <li><a href="#accountinfo" class="nav-link" data-toggle="tab">ข้อมูลด้านบัญชีและการเงิน</a></li>
+                                    <li><a href="#deliveryinfo" class="nav-link" data-toggle="tab">ข้อมูลด้านการขนส่ง</a></li>
+                                    <li><a href="#contactinfo" class="nav-link" data-toggle="tab">ข้อมูลการติดต่อ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body tabs-menu-body main-content-body-right border">
+                            <div class="tab-content">
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/customerinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/saleinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/accountinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/deliveryinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/contactinfo.cshtml" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button id="btn-save_exit" class="btn ripple btn-primary btn-save_form" data-action="save_exit" type="submit">Save</button>
+                        <button id="btn-save_new" class="btn ripple btn-success btn-save_form" data-action="save_new" type="submit">Save & New</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Scroll with content modal -->
+</form>
+
+
+
+<form id="frm_data_addnewqty" name="frm_data_addnewqty" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data_addnewqty" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:750px!important;max-height: 550px !important;">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">เพิ่มหน่วยนับสินค้า</h6>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary tabs-style-2">
+                        <div class="form-group">
+                            <div class="row mg-t-10">
+                                <div class="col-sm-6">
+                                    <div class="row mg-b-5">
+                                        <label for="gprice_gunit" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน่วยนับ (Unit)</label>
+                                        <select class="form-control form-control-sm select2 col-sm-6 mg-t-5" id="gprice_gunit" name="gprice_gunit" style="width: 100%;">
+                                            <option>Please select..</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="row mg-b-5 mg-t-10">
+                                        <label for="gprice_prqty" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จำนวน</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-6" id="gprice_prqty" name="gprice_prqty" placeholder="" value="1" disabled>
+                                    </div>
+
+                                    <div class="row mg-b-5">
+                                        <label for="gprice_qtysmall" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัว x หน่วยย่อย</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-6" id="gprice_qtysmall" name="gprice_qtysmall" placeholder="">
+                                    </div>
+
+                                    <div class="row mg-b-25">
+                                        <label for="gprice_goutput" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-6" id="gprice_goutput" name="gprice_goutput" placeholder="">
+                                    </div>
+
+                                    <div class="row mg-b-5">
+                                        <label for="gprice_gprice" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาตั้ง (ขาย)</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-5" id="gprice_gprice" name="gprice_gprice" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">บาท</label>
+                                    </div>
+
+                                    <div class="row mg-b-2">
+                                        <label for="gprice_gpricepur" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาตั้ง (ซื้อ)</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-5" id="gprice_prqty" name="gprice_gpricepur" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">บาท</label>
+                                    </div>
+
+                                    <div class="row mg-b-5">
+                                        <label for="gprice_purch" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Purchase</label>
+                                        <div class="col-sm-6">
+                                            <input type="checkbox" class="form-check-input mg-l-2 mg-t-10" id="gprice_purch" name="gprice_purch" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="row mg-b-5">
+                                        <label for="item_gpricea" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาขาย A</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-4" id="item_gpricea" name="item_gpricea" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">&nbsp;&nbsp;บาท</label>
+                                    </div>
+                                    <div class="row mg-b-5">
+                                        <label for="item_gpriceb" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาขาย B</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-4" id="item_gpriceb" name="item_gpriceb" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">&nbsp;&nbsp;บาท</label>
+                                    </div>
+                                    <div class="row mg-b-5">
+                                        <label for="item_gpricec" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาขาย C</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-4" id="item_gpricec" name="item_gpricec" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">&nbsp;&nbsp;บาท</label>
+                                    </div>
+                                    <div class="row mg-b-5">
+                                        <label for="item_gpriced" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาขาย D</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-4" id="item_gpriced" name="item_gpriced" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">&nbsp;&nbsp;บาท</label>
+                                    </div>
+                                    <div class="row mg-b-5">
+                                        <label for="item_gpricee" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาขาย E</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-4" id="item_gpricee" name="item_gpricee" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">&nbsp;&nbsp;บาท</label>
+                                    </div>
+                                    <div class="row mg-b-5">
+                                        <label for="item_gpricef" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ราคาขาย F</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-4" id="item_gpricef" name="item_gpricef" placeholder="">
+                                        <label class="col-form-label tx-left col-sm-1">&nbsp;&nbsp;บาท</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-save_newqty" class="btn ripple btn-primary btn-save_form" data-action="save_newqty" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Scroll with content modal -->
+</form>
+
+
+<form id="frm_data_addnewstmaswh" name="frm_data_addnewstmaswh" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data_addnewstmaswh" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:500px!important;max-height: 550px !important;">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">เพิ่มสถานที่เก็บสินค้า</h6>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary tabs-style-2">
+                        <div class="form-group">
+                            <div class="row mg-t-10">
+                                <div class="col-sm-12">
+                                    <div class="row mg-b-8">
+                                        <label for="gprice_gunit" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถานที่เก็บ (Location)</label>
+                                        <select class="form-control form-control-sm select2 col-sm-5 mg-t-5" id="stmaswh_whlocation1" name="stmaswh_whlocation1" style="width: 100%;">
+                                            <option>Please select..</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="row mg-b-8">
+                                        <label for="gprice_prqty" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รหัสคลังสินค้า</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-5 mg-t-3" id="stmaswh_whcode" name="stmaswh_whcode" placeholder="" value="1" disabled>
+                                    </div>
+
+                                    <div class="row mg-b-8">
+                                        <label for="gprice_qtysmall" class="col-form-label tx-left col-sm-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ชื่อคลังสินค้า</label>
+                                        <input type="text" class="form-control form-control-sm col-sm-5 mg-t-3" id="stmaswh_whlocation2" name="stmaswh_whlocation2" placeholder="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-save_stmaswh" class="btn ripple btn-primary btn-save_form" data-action="save_stmaswh" type="submit">Add</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Scroll with content modal -->
+</form>
+
+<form id="frm_search" name="frm_search" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_search" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:1250px;">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">Advanced Search</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="font-size: 12px;">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card card-primary">
+                                <div class="card-header pb-0">
+                                    <span class="card-title mb-0 pb-0">Basic Information</span>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_code1" class="col-form-label tx-left form-label">Product Definition - ชื่อกลุ่มสินค้า:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_code1">
+                                            <select class="form-control form-control-sm select2-sm select2_condb" id="search_item_code1" name="search_item_code1" style="width: 100%;" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_code3" class="col-form-label tx-left form-label">Brand Name - ยี่ห้อสินค้า:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_code3">
+                                            <select class="form-control form-control-sm select2-sm select2_condb" id="search_item_code3" name="search_item_code3" style="width: 100%;" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_carmodel" class="col-form-label tx-left form-label">Car Model:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_carmodel">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_carmodel" name="search_item_carmodel" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_carbrand" class="col-form-label tx-left form-label">Car Brand:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_carbrand">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_carbrand" name="search_item_carbrand" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-sm-6">
+                            <div class="card card-primary">
+                                <div class="card-header pb-0">
+                                    <span class="card-title mb-0 pb-0">Detail Information</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_productdivision">Product Division:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_productdivision">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_productdivision" name="search_item_productdivision" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_maincategory">Main Category:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_maincategory">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_maincategory" name="search_item_maincategory" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_subcategory">Sub Category:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_subcategory">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_subcategory" name="search_item_subcategory" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_stockstatus">Stock Status:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_stockstatus">
+                                            <select class="form-control form-control-sm select2 select2-sm select2_notcondb" id="search_item_stockstatus" name="search_item_stockstatus" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_skufocus">SKU Focus:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_skufocus">
+                                            <select class="form-control form-control-sm select2 select2-sm" id="search_item_skufocus" name="search_item_skufocus" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="font-size: 14px;">
+                    <div class="form-group mb-0 justify-content-end">
+                        <div>
+                            <button type="submit" class="btn btn-primary mg-r-10">Search</button>
+                            <button type="reset" id="btn_reset" name="btn_reset" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- start edit kung 2021-12-24 -->
+
+<div id="contact" name="contact" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-addcontact" data-keyboard="false" data-backdrop="static" style="height: 600px !important;">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:480px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">เพิ่มรายชื่อผู้ติดต่อ</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <form id="frm_addcontact">
+                    <div class="modal-body">
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">Contact number<span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-sm" placeholder="Contact number" type="text" id="contact_number" style="margin-top: -3px;" required data-parsley-error-message="Contact number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">Extension</label>
+                                </div>
+                                <div class="col-md-8 ">
+                                    <input class="form-control form-control-sm" placeholder="Extension" type="text" id="contact_extension" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">Purpose<span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select class="form-control select2" id="contact_purpose_code" name="Purpose_code" data-width="100%" required data-parsley-error-message="Please Select Purpose">
+                                        <option value="">Select Purpose</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">Description</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-sm" placeholder="Description" type="text" id="contact_description" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-save-contactinfo" class="btn ripple btn-primary btn-save_form" data-action="save_exit" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary btn-save_form" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Scroll with content modal -->
+    </div>
+</div>
+
+<div id="addr_modal" name="addr_modal" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-addr" data-keyboard="false" data-backdrop="static" style="height: 600px !important;">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:480px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">ที่อยู่จัดส่ง</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <form id="frm_customer">
+                    <div class="modal-body">
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="form-label">ที่อยู่ <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input class="form-control form-control-sm" placeholder="ที่อยู่" type="text" id="cus_address" style="margin-top: -3px;" required data-parsley-error-message="ที่อยู่">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="form-label">จังหวัด <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-10 ">
+                                    <select class="form-control  select2 provicne" id="provicne" name="provicne" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกจังหวัด">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="form-label">อำดภอ <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select class="form-control  select2 amphur" id="amphur" name="amphur" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกอำเภอ">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="form-label">ตำบล <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select class="form-control  select2 district" id="district" name="district" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกตำบล">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="form-label">ไปรษณี <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="postcode" name="postcode" required data-parsley-error-message="กรุณากรอกรหัสไปษณีย์">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="form-label">เรื่มต้น</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="main-toggle-group-demo" style="padding: 0.375rem 0.75rem;">
+                                        <div class="main-toggle main-toggle-success default-switches">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-item-create" class="btn ripple btn-primary btn-save-addr" data-action="save_exit" type="submit">Save</button>
+                        <button id="btn-edit" class="btn ripple btn-primary btn-save-addr d-none" data-action="save_exit" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Scroll with content modal -->
+    </div>
+</div>
+
+
+<div class="modal fade" id="trpModal" tabindex="-1" role="dialog" aria-labelledby="trpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="trpModalLabel">บริษัทเอกชน</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="frm_trans" name="frm_trans" autocomplete="off">
+                    <div class="card-body">
+                        <div class="form-group form-group-sm row d-flex justify-content-center">
+                            <div class="col-md-5">
+                                <label class="col-form-label">ชื่อขนส่ง</label>
+                                <select class="form-control  select2 tran_name" id="tran_name" name="tran_name" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกชื่อขนส่ง">
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-5">
+                                <label class="col-form-label">ชำระค่าขนส่ง</label>
+                                <div class="row">
+                                    <div class="col-form-label col-6">
+                                        <label class="rdiobox"><input type="radio" id="lov_deliverycost_code_1" class="lov_deliverycost_code col-form-label" name="rdio" value="1"> <span class="tx-success">ต้นทาง</span></label>
+                                    </div>
+                                    <div class="col-form-label col-6">
+                                        <label class="rdiobox"><input type="radio" id="lov_deliverycost_code_2" class="lov_deliverycost_code col-form-label" name="rdio" value="0" checked=""> <span class="tx-danger">ปลายทาง</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <label class="col-form-label">เรื่มต้น</label>
+                                <div class="main-toggle-group-demo" style="padding: 0.375rem 0;">
+                                    <div class="main-toggle main-toggle-success default-switches">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+
+                    <div class="form-group form-group-sm row d-flex justify-content-center">
+                        <div class="col-2">
+                            <div class="input-group btn-create-trp">
+                                <button id="btn-item-trp-create" type="submit" class="btn btn-success btn-with-icon btn-block">ADD +</button>
+                            </div><!-- input-group -->
+                            <div class="input-group btn-edit-trp hide">
+                                <button id="btn-edit-trp" type="submit" class="btn btn-success btn-with-icon btn-block">Edit</button>
+                            </div><!-- input-group -->
+
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <button id="btn-item-trp-cancle" type="reset" class="btn btn-light btn-with-icon btn-block">Cancel</button>
+                            </div><!-- input-group -->
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="border-top my-3"></div>
+                <div class="table-responsive mg-t-20" style="overflow: hidden;">
+                    <table id="tbl-trp-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="100%"></table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                @*<button type="button" class="btn btn-primary">Send message</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Scroll with content modal -->
+<!-- end edit kung 2021-12-24 -->

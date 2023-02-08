@@ -1,0 +1,621 @@
+﻿@{
+    ViewData["site_logo"] = "../assets/img/logo2.png";
+    ViewData["site_logo2"] = "../assets/img/VSK-White-01.png";
+
+}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <base href="~/" />
+    <!-- Title -->
+    <title> VSK Autoparts Co., Ltd - MIS (Management Information System)</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!--begin::Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!--end::Fonts -->
+    <!--- Internal Select2 css-->
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+    <!-- Internal Data table css -->
+    <link href="assets/plugins/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="assets/plugins/datatable/css/buttons.bootstrap4.min.css" rel="stylesheet">
+    <link href="assets/plugins/datatable/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="assets/plugins/datatable/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/plugins/datatable/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css" rel="stylesheet">
+
+    <!--Internal  Datetimepicker-slider css -->
+    <link href="assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
+    <link href="assets/plugins/pickerjs/picker.min.css" rel="stylesheet">
+
+    <!---Internal  Owl Carousel css-->
+    <link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+
+    <!--- Style css-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-dark.css" rel="stylesheet">
+
+    <!---Internal Fileupload css-->
+    <link href="assets/plugins/fileuploads/css/fileupload.css" rel="stylesheet" type="text/css" />
+
+    <!---Internal Fancy uploader css-->
+    <link href="assets/plugins/fancyuploder/fancy_fileupload.css" rel="stylesheet" />
+
+    <!---Skinmodes css-->
+    <link href="assets/css/skin-modes.css" rel="stylesheet" />
+
+    <!--- Animations css-->
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+    <!--- Internal Sweet-Alert css-->
+    <link href="assets/plugins/sweet-alert/sweetalert.css" rel="stylesheet">
+
+    <!-- Internal Gallery css -->
+    <link href="assets/plugins/gallery/gallery.css" rel="stylesheet">
+
+    <!-- Toastr -->
+    <link href="https://www.jqueryscript.net/demo/Highly-Customizable-jQuery-Toast-Message-Plugin-Toastr/build/toastr.css" rel="stylesheet" />
+
+    <!-- Context Menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+
+    <link href="assets/css/main.css?ref=@Guid.NewGuid()" rel="stylesheet">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+</head>
+
+<body class="main-body horizontal-color">
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="assets/img/loader.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+    <!-- Page -->
+    <div class="page">
+
+        <!-- main-header opened -->
+        <div class="main-header nav nav-item hor-header">
+            <div class="container">
+                <div class="main-header-left ">
+                    <a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a><!-- sidebar-toggle-->
+                    <a class="header-brand" href="#">
+                        <img src="@ViewData["site_logo"]" class="desktop-logo" style=" height:44px;">
+                        <img src="@ViewData["site_logo2"]" class="desktop-dark" style=" height:44px;">
+                    </a>
+                    <div class="ml-4">
+                        <select class="form-control" id="apps_id" required></select>
+                    </div>
+                </div><!-- search -->
+                <div class="main-header-right">
+                    <div class="main-header-center mg-t-10">
+                        <h5 class="tx-danger" id="env_version" style="text-align:left; display:none;">DEVELOPER VERSION </h5>
+                    </div>
+                    <ul class="nav">
+                        <li class="">
+                            <div class="dropdown">
+                                <button aria-expanded="false" aria-haspopup="true" class="btn ripple btn-primary"
+                                        data-toggle="dropdown" id="dropdownMenuButton" type="button">
+                                    VSKAUTOPARTS.COM <i class="fas fa-caret-down ml-1"></i>
+                                </button>
+                                <div class="dropdown-menu tx-13">
+                                    <a class="dropdown-item" href="#">VSKAUTOPARTS.COM</a>
+                                    <a class="dropdown-item" href="#">KSW.VSKAUTOPARTS.COM</a>
+                                    <a class="dropdown-item" href="#">KLH.VSKAUTOPARTS.COM</a>
+                                    <a class="dropdown-item" href="#">LLK.VSKAUTOPARTS.COM</a>
+                                    <a class="dropdown-item" href="#">NWM.VSKAUTOPARTS.COM</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nav nav-item  navbar-nav-right ml-auto ">
+                        <div class="nav-link" id="bs-example-navbar-collapse-1">
+                            <form class="navbar-form" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button type="reset" class="btn btn-default">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                        <button type="submit" class="btn btn-default nav-link resp-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="header-icon-svgs feather feather-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="nav-item full-screen fullscreen-button">
+                            <a class="new nav-link d-none" href="#" id="btn-darkmode"><i class="fas fa-moon"></i></a>
+                            <a class="new nav-link d-none" href="#" id="btn-lightmode"><i class="fas fa-sun"></i></a>
+                        </div>
+                        <div class="dropdown main-profile-menu nav nav-item nav-link">
+                            <a class="profile-user d-flex" href="">
+                                <img alt="" src="assets/img/user-default.jpg">
+                            </a>
+
+                            <div class="dropdown-menu">
+
+                                <div class="main-header-profile bg-primary p-3">
+                                    <div class="d-flex wd-100p">
+                                        <div class="main-img-user"><img alt="" src="assets/img/user-default.jpg" class=""></div>
+                                        <div class="ml-3 my-auto tx-secondary">
+                                            <h6 class="profile_fullname tx-secondary" id="profile_fullname">none none</h6><span>Premium Member</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
+                                <a class="dropdown-item" id="btn-signout" href="#"><i class="bx bx-log-out"></i> Sign Out</a>
+                            </div>
+                        </div>
+                        <div class="nav-item ">
+                            <h6 class="tx-secondary mg-t-10 profile_fullname">-</h6>
+                            <div style="margin-top:-10px;"><span class="tx-secondary profile_role" style="font-size:11px;">-</span></div>
+                        </div>
+
+                        @*
+                            <div class="dropdown main-header-message right-toggle">
+                                <a class="nav-link pr-0" data-toggle="sidebar-right" data-target=".sidebar-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="header-icon-svgs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                </a>
+                            </div>
+                        *@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /main-header -->
+        <!--Horizontal-main -->
+        <div class="sticky">
+            <div class="horizontal-main hor-menu clearfix side-header bg-dark">
+                <div class="horizontal-mainwrapper container clearfix">
+                    <!--Nav-->
+                    <nav class="horizontalMenu clearfix bg-dark">
+                        <ul id="header-menu_load" class="horizontalMenu-list">
+                        </ul>
+                    </nav>
+                    <!--Nav-->
+                </div>
+            </div>
+        </div>
+        <!--Horizontal-main -->
+        <!-- main-content opened -->
+        <div class="main-content horizontal-content">
+            @RenderBody()
+        </div>
+        <!-- main-content closed -->
+        <!-- Footer opened -->
+        <div class="main-footer ht-40">
+            <div class="container-fluid pd-t-0-f ht-100p">
+
+                <span>Copyright © 2020 VSK Autoparts Co., Ltd. Designed by MIS (Management Information System) Tech All rights reserved.</span><br />
+            </div>
+        </div>
+        <!-- Footer closed -->
+
+    </div>
+    <!-- End Page -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!--Internal  Datepicker js -->
+    <script src="assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Underscore Bundle js -->
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.11.0/underscore-min.js"></script>
+
+    <!-- loadingoverlay min js by tan-->
+    <script src="assets/js/loadingoverlay.min.js"></script>
+
+    <!-- Moment js  by tan-->
+    <script src="assets/plugins/moment/moment.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="lib/firebase/firebase-app.js"></script>
+    <script src="lib/firebase/firebase-auth.js"></script>
+    <script src="lib/firebase/firebase-analytics.js"></script>
+    <script src="lib/firebase/firebase-firestore.js"></script>
+    <script src="lib/firebase/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+    <script src="lib/firebase/firebase-init.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="assets/plugins/ionicons/ionicons.js"></script>
+
+    <!--Internal  Parsley.min js -->
+    <script src="assets/plugins/jquery-steps/jquery.steps.min.js"></script> <!-- TAN 31/09/2020 -->
+    <script src="assets/plugins/parsleyjs/parsley.min.js"></script>
+
+    <!-- Internal Select2 js-->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!--Internal  jquery-simple-datetimepicker js -->
+    <script src="assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js"></script>
+
+    <!--Internal  pickerjs js -->
+    <script src="assets/plugins/pickerjs/picker.min.js"></script>
+
+    <!-- P-scroll js -->
+    <!--<script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/p-scroll.js"></script>-->
+    <!-- Internal Owl Carousel js-->
+    <script src="assets/plugins/owl-carousel/owl.carousel.js"></script>
+
+    <!---Internal  Multislider js-->
+    <script src="assets/plugins/multislider/multislider.js"></script>
+
+    <!-- eva-icons js -->
+    <script src="assets/js/eva-icons.min.js"></script>
+
+    <!-- Rating js-->
+    <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+    <script src="assets/plugins/rating/jquery.barrating.js"></script>
+
+    <!-- Custom Scroll bar Js-->
+    <script src="assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Horizontalmenu js-->
+    <script src="assets/plugins/horizontal-menu/horizontal-menu-2/horizontal-menu.js"></script>
+
+    <!-- Sticky js -->
+    <script src="assets/js/sticky.js"></script>
+
+    <!--Internal  Sweet-Alert js-->
+    <script src="assets/plugins/sweet-alert/sweetalert.min.js"></script>
+    <script src="assets/plugins/sweet-alert/jquery.sweet-alert.js"></script>
+
+    <!-- Sweet-alert js  -->
+    <!--  <script src="assets/plugins/sweet-alert/sweetalert.min.js"></script> -->
+    @*<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>*@
+
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> -->
+    <!-- Internal Data tables -->
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatable/js/responsive.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatable/js/jszip.min.js"></script>
+    <script src="assets/plugins/datatable/js/pdfmake.min.js"></script>
+    <script src="assets/plugins/datatable/js/vfs_fonts.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.html5.min.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.print.min.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.colVis.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatable/js/responsive.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+    <script src="assets/plugins/read-excel-file.min.js"></script>
+
+
+    @*Som-O 2020/11/03*@
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/1.9.14/autoNumeric.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="https://www.jqueryscript.net/demo/Highly-Customizable-jQuery-Toast-Message-Plugin-Toastr/toastr.js"></script>
+
+    <!-- Context Menu -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    <!-- combobox js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-combobox/1.1.8/js/bootstrap-combobox.min.js"></script>
+    <!-- custom js -->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Internal form-elements js -->
+    <script src="assets/js/form-elements.js"></script>
+
+    <script src="assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js"></script>
+
+    <!-- Internal Gallery js -->
+    <script src="assets/plugins/gallery/lightgallery-all.min.js"></script>
+    <script src="assets/plugins/gallery/jquery.mousewheel.min.js"></script>
+
+    <!--Internal Fileuploads js-->
+    <script src="assets/plugins/fileuploads/js/fileupload.js"></script>
+    <script src="assets/plugins/fileuploads/js/file-upload.js"></script>
+
+    <!--Internal Fancy uploader js-->
+    <script src="assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+    <script src="assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+    <script src="assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+    <script src="assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+    <script src="assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+    <!-- Apps -->
+    <script src="~/lib/init-plugins.js?ref=@Guid.NewGuid()"></script>
+    @*<script src="~/lib/init-profile.js?ref=@Guid.NewGuid()"></script>*@
+    <script src="~/lib/init-log.js?ref=@Guid.NewGuid()"></script>
+    <script src="@ViewData["Script"]?ref=@Guid.NewGuid()"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <script type="text/javascript">
+
+        firebase.auth().onAuthStateChanged(async function (user) {
+
+            if (user) {
+
+                const objPermission = JSON.parse(localStorage.getItem('objAuth'));
+                const objApps = JSON.parse(localStorage.getItem('objApps'));
+
+                console.log(objPermission)
+
+                if (objPermission === null) {
+
+                    firebase.auth().signOut().then(function () {
+
+                        localStorage.clear();
+
+                        window.location.assign('./login');
+
+                    }).catch(function (error) {
+                        // An error happened.
+                    });
+
+                }
+
+                let objMenu = objPermission[0]['menu']
+
+                $('.profile_fullname').html(objPermission[0]['empcode'] + ' ' + objPermission[0]['firstname'] + ' ' + objPermission[0]['lastname']);
+                $('#welcome_name').html(objPermission[0]['firstname'] + ' ' + objPermission[0]['lastname']);
+                $('.profile_role').html(objPermission[0]['role']);
+
+                $('#header-menu_load').append('<li aria-haspopup="true"><a href="./home" class=""><i class="fas fa-home"></i> Home</a></li>');
+
+                await $.each(objMenu.data, function (key, val) {
+
+                    if (val['menu_parent'] === '' && val['menu_url'] === '#') {
+
+                        $('#header-menu_load').append('<li aria-haspopup="true">\
+                                                                                                                                    <a href="javascript:void(0)" class="sub-icon"><i class="' + val['menu_icon'] + '">\
+                                                                                                                                        </i> ' + val['menu_name'] + '<i class="fe fe-chevron-down horizontal-icon"></i>\
+                                                                                                                                    </a>\
+                                                                                                                                    <ul id="parents_' + val['menu_id'] + '" class="sub-menu"></ul>\
+                                                                                                                                </li>');
+
+                    } else if (val['menu_parent'] === '' && val['menu_url'] !== '') {
+                        $('#header-menu_load').append('<li aria-haspopup="true" id="' + val['menu_id'] + '"><a href="' + val['menu_url'] + '" class=""><i class="' + val['menu_icon'] + '"></i> ' + val['menu_name'] + '</a></li>');
+                    }
+
+                });
+
+                await $.each(objMenu.data, function (key, val) {
+
+                    if (val['menu_parent'] !== '') {
+
+
+                        $('#parents_' + val['menu_parent']).append('<li aria-haspopup="true"><a href="' + val['menu_url'] + '" class="slide-item">' + val['menu_name'] + '</a></li>');
+
+                    }
+
+                });
+
+                await $('#apps_id').append('<option value="' + objPermission[0]['application'] + '">' + objPermission[0]['application'] + ' : ' + objPermission[0]['role'] + '</option>');
+
+                await $.each(objApps, function (key, val) {
+
+                    if (objPermission[0]['application'] != val['application']) {
+
+                        $('#apps_id').append('<option value="' + val['application'] + '">' + val['application'] + ' : ' + val['role'] + '</option>');
+                    }
+
+                });
+
+            } else {
+
+                window.location.assign('./login');
+
+            }
+
+            $('#btn-signout').click(function (e) {
+
+                e.preventDefault();
+
+                swal({
+                    title: "Are you sure?",
+                    text: "You have been logged out!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn btn-danger",
+                    confirmButtonText: "Logout!",
+                    closeOnConfirm: false
+                },
+                    function () {
+                        firebase.auth().signOut().then(function () {
+
+                            localStorage.clear();
+
+                            window.location.assign('./login');
+
+                        }).catch(function (error) {
+                            // An error happened.
+                        });
+                    });
+
+
+                //Swal.fire({
+                //    title: 'Are you sure?',
+                //    text: "You have been logged out!",
+                //    icon: 'warning',
+                //    showCancelButton: true,
+                //    confirmButtonColor: '#d33',
+                //    cancelButtonColor: '#3085d6',
+                //    confirmButtonText: 'Logout!'
+                //}).then((result) => {
+                //    if (result.value) {
+                //        firebase.auth().signOut().then(function () {
+
+                //            localStorage.clear();
+
+                //            window.location.assign('./login');
+
+                //        }).catch(function (error) {
+                //            // An error happened.
+                //        });
+                //    }
+                //})
+
+            });
+
+            $('#apps_id').on('change', function () {
+
+                //let url_api = "http://localhost:49705";
+                let url_api = "http://192.168.1.247:8089/";
+                let objPermission = JSON.parse(localStorage.getItem('objAuth'));
+                let url_auth_sys_application_get = url_api + '/v2/AuthSysApplicationGet';
+
+                url = new URL(url_auth_sys_application_get);
+
+                url.search = new URLSearchParams({
+                    application_code: this.value,
+                    record_status: 1
+                });
+                fetch(url).then(function (response) {
+                    return response.json();
+                }).then(function (result) {
+
+                    console.log(result)
+
+                    let objAuth = [];
+                    let url_auth_sys_signindm_get = url_api + '/SignInWithDmGet';
+
+                    url = new URL(url_auth_sys_signindm_get);
+
+                    url.search = new URLSearchParams({
+                        username: objPermission[0]['username'],
+                        domain: objPermission[0]['domain'],
+                        application: result.data[0]['application_id']
+                    });
+
+                    fetch(url).then(function (response) {
+                        return response.json();
+                    }).then(function (result) {
+
+                        $.each(result.data, function (key, val) {
+
+                            objAuth.push({
+                                application: val['application'],
+                                domain: val['domain'],
+                                role: val['role'],
+                                username: val['username'],
+                                empcode: val['empcode'],
+                                firstname: val['firstname'],
+                                lastname: val['lastname'],
+                                nickname: val['nickname'],
+                                menu: JSON.parse(val['menu'])
+                            });
+
+                        });
+
+                        if (result.length === 1) {
+
+                            localStorage.setItem("objAuth", JSON.stringify(objAuth));
+
+                            window.location.assign('./home');
+
+                        } else {
+
+                            firebase.auth().signOut().then(function () {
+
+                                localStorage.clear();
+
+                                window.location.assign('./login');
+
+                            }).catch(function (error) {
+                                // An error happened.
+                            });
+
+                        }
+
+                    });
+
+                });
+
+            });
+
+
+            $(document).ready(function (e) {
+
+                if (getCookie('theme') === 'dark-theme') {
+
+                    $('body').addClass('dark-theme');
+                    $('#btn-lightmode').removeClass('d-none');
+                    $('#btn-darkmode').addClass('d-none');
+
+                } else {
+
+                    $('body').removeClass('dark-theme');
+                    $('#btn-lightmode').addClass('d-none');
+                    $('#btn-darkmode').removeClass('d-none');
+
+                }
+
+                $('#btn-darkmode').click(function (e) {
+
+                    setCookie('theme', 'dark-theme', 30);
+
+                    $('body').addClass('dark-theme');
+
+                    $('#btn-lightmode').removeClass('d-none');
+                    $('#btn-darkmode').addClass('d-none');
+
+                    return false;
+                });
+
+
+                $('#btn-lightmode').click(function (e) {
+
+                    setCookie('theme', '', 30);
+
+                    $('body').removeClass('dark-theme');
+
+                    $('#btn-darkmode').removeClass('d-none');
+                    $('#btn-lightmode').addClass('d-none');
+
+                    return false;
+
+                });
+
+
+            })
+
+        });
+
+    </script>
+
+</body>
+</html>

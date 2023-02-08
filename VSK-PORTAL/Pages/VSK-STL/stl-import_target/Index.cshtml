@@ -1,0 +1,57 @@
+﻿@page "/stl/import_target"
+
+@{
+    ViewData["Script"] = "apps/stl/stl-mas-import_target.js";
+
+    ViewData["Title"] = "Index";
+    ViewData["Content-Title"] = "Customer Profile";
+    ViewData["Content-Title-Page"] = "Import Target";
+
+}
+
+
+@* container opened *@
+<div class="container">
+
+    @* subheader *@
+    <div class="breadcrumb-header justify-content-between">
+
+        @* breadcrumb *@
+        <div class="my-auto">
+            <div class="d-flex">
+                <h4 class="content-title mb-0 my-auto">@ViewData["Content-Title"]</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ @ViewData["Content-Title-Page"]</span>
+            </div>
+        </div>
+        @* breadcrumb *@
+
+        @* action *@
+        @*<div class="d-flex my-xl-auto right-content">
+                <div class="mb-3 mb-xl-0">
+                    <h4 style="color: red;">UAT Version</h4>
+                </div>
+            </div>*@
+        @* action *@
+
+
+    </div>
+    @* subheader *@
+
+    @* datatables *@
+    <div id="card-wizards" class="row">
+
+        <partial name="~/Pages/VSK-STL/stl-import_target/Wizards.cshtml" />
+
+    </div>
+
+    @*<div id="card-datatables" class="row scrollbar-ripe-malinka">
+
+            <partial name="~/Pages/VSK-STL/stl-import_target/List.cshtml" />
+
+        </div>*@
+
+    @* datatables *@
+
+
+
+</div>
+@* Container closed *@

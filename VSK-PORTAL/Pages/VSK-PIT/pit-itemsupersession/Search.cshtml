@@ -1,0 +1,70 @@
+﻿<div class="border-top my-3"></div>
+<div class="breadcrumb-header justify-content-between">
+    <div class="card-header pb-0">
+        <h5 class="card-title mb-0 pb-0">รายละเอียดลูกค้า</h5>
+    </div>
+    <div class="card-header pb-0">
+        <h5 class="card-title mb-0 pb-0 esave-group"></h5>
+    </div>
+</div>
+<div class="border-top my-3"></div>
+<div class="card-body">
+    <div class="form-group form-group-sm row">
+        <div class="col-md-4">
+            <label class="col-form-label">รหัสลูกค้า</label>
+            <input type="text" class="form-control" id="cus_code" name="cus_code" readonly required>
+        </div>
+        <div class="col-md-4">
+            <label class="col-form-label">ชื่อลูกค้า</label>
+            <input type="text" class="form-control" id="cus_name" name="cus_name" readonly required>
+        </div>
+        <div class="col-md-4">
+            <label class="col-form-label">ที่อยู่</label>
+            <input type="text" class="form-control" id="cus_address_search" readonly name="cus_address_search" required>
+        </div>
+
+    </div>
+
+    <!-- 2 -->
+    <div class="form-group form-group-sm row bootstrap-timepicker">
+        <div class="col-4">
+            <label class="col-form-label">ผู้ส่ง</label>
+            <select class="form-control select2-no-search" id="cn_pre_job_type" disabled name="cn_pre_job_type" data-width="100%" required data-parsley-error-message="">
+                <option value="">Please select..</option>
+                <option value="บริษัท ซุปเปอร์พาร์ท จำกัด">บริษัท ซุปเปอร์พาร์ท จำกัด</option>
+                <option value="บริษัท ว.ศิริกาญออโตพาร์ท จำกัด">บริษัท ว.ศิริกาญออโตพาร์ท จำกัด</option>
+                <option value="บริษัท ซีพีเอส ออโตโมทีฟ จำกัด">บริษัท ซีพีเอส ออโตโมทีฟ จำกัด</option>
+            </select>
+            @*<input type="text" class="form-control" id="send_form" name="send_form" required>*@
+        </div>
+        <div class="col-4">
+            <label class="col-form-label">Sale</label>
+            <input type="text" class="form-control" id="sale" name="sale" readonly required>
+        </div>
+        <div class="col-4">
+            <label class="col-form-label">Tel.</label>
+            <input type="text" class="form-control" id="tel" name="tel" readonly required>
+        </div>
+    </div>
+
+    <div class="form-group form-group-sm row bootstrap-timepicker">
+        <div class="col-4">
+            <label class="col-form-label">Zone  </label>
+            <select class="form-control  select2 zone" id="zone" name="zone" style="width: 100%;" disabled required>
+                <option value="">Please select..</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <label class="col-form-label">Route</label>
+            <select class="form-control  select2 route" id="route" name="route" style="width: 100%;" disabled required>
+                <option value="">Please select..</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <label class="col-form-label">Sub Route</label>
+            <select class="form-control  select2" id="sub_route" name="sub_route" style="width: 100%;" disabled required>
+                <option value="">Please select..</option>
+            </select>
+        </div>
+    </div>
+</div>

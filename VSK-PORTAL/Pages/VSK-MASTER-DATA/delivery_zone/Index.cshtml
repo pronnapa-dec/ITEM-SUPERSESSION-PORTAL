@@ -1,0 +1,53 @@
+﻿@page "/stl/master/delivery_zone"
+
+@{
+    ViewData["Script"] = "apps/masterdata/delivery_zone.js";
+
+    ViewData["Title"] = "Index";
+    ViewData["Content-Title"] = "Delivery Zone";
+    ViewData["Content-Title-Page"] = "ขนส่งสินค้าเอกชน";
+
+}
+
+@* container opened *@
+<div class="container">
+
+
+    @* subheader *@
+    <div class="breadcrumb-header justify-content-between">
+
+        @* breadcrumb *@
+        <div class="my-auto">
+            <div class="d-flex">
+                <h4 class="content-title mb-0 my-auto">ข้อมูลบริษัทขนส่งเอกชน</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ ข้อมูลบริษัทขนส่งเอกชนแยกตามพื้นที่</span>
+            </div>
+        </div>
+        @* breadcrumb *@
+        @* action *@
+        <div class="d-flex my-xl-auto right-content mb-3 mb-xl-0">
+            @*<div class="mb-3 mb-xl-0">
+                <button id="btn-item_search" class="btn btn-primary btn-with-icon btn-block" data-toggle="modal" data-target="#modal-frm_search">Advanced search</button>
+            </div>*@
+            @*<div class="mb-3 mb-xl-0 mg-l-10">*@
+            <button id="btn-item_create" class="btn btn-success btn-with-icon btn-block" data-toggle="modal" data-target="#modal-frm_data"><i class="fas fa-plus"></i>&nbsp; เพิ่มข้อมูลขนส่งเอกชน </button>
+            @*</div>*@
+        </div>
+        @* action *@
+
+    </div>
+    @* subheader *@
+
+    @* datatables *@
+    <div id="card-datatables" class="row scrollbar-ripe-malinka">
+        <partial name="~/Pages/VSK-MASTER-DATA/delivery_zone/List.cshtml" />
+    </div>  
+    @* datatables *@
+
+    @* modal form *@
+    <div id="card-form" class="row">
+        <partial name="~/Pages/VSK-MASTER-DATA/delivery_zone/Form.cshtml" />
+    </div>
+    @* modal form *@
+
+</div>
+@* Container closed *@

@@ -1,0 +1,140 @@
+﻿<!-- Scroll with content modal -->
+<form id="frm_data" name="frm_data" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:690px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">@ViewData["Content-Title-Page"] Form</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="kt-portlet__body">
+
+                        <div class="form-group form-group-sm  row">
+                            <label class="col-sm-3 col-form-label">วันที่/เวลา :</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="cn_datetime" name="cn_datetime" type="text" value="" required>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-group-sm  row">
+                            <label class="col-sm-3 col-form-label">สถานะ :</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="job_status" name="job_status" placeholder="" value="" style="font-weight:bold;">
+
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm  row">
+                            <label class="col-sm-3 col-form-label">ผู้รับผิดชอบ :</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="job_assige" name="job_assige" type="text" value="" required readonly>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm  row">
+                            <label class="col-md-3 col-form-label">สาขา</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control cn_pre_job_branch" id="cn_pre_job_branch" name="cn_pre_job_branch" value="">
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm  row">
+                            <label class="col-md-3 col-form-label">ข้อมูลสินค้า :</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="cn_pre_job_item_name" name="cn_pre_job_item_name" value="" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row ">
+                            <label class="col-sm-3 col-form-label">QTY. :</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="cn_qty" name="cn_qty" value="" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row ">
+                            <label class="col-sm-3 col-form-label">การรับแจ้ง :</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="source_site_code" name="source_site_code" data-width="100%" required="" disabled>
+                                    <option value="">-- เลือกการรับแจ้ง--</option>
+                                    <option value="1">รับคืน</option>
+                                    @*<option value="2">หน้างาน</option>*@
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row ">
+                            <label class="col-sm-3 col-form-label">บันทึกโดย :</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="created_by" name="created_by" type="text" value="" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row">
+                            <label class="col-sm-3 col-form-label">สาเหตุ : </label>
+                            <div class="col-sm-9">
+                                <select class="form-control cn_comment" id="job_comment" name="job_comment" data-width="100%" required="">
+                                    <option value="">-- เลือกสาเหตุการรับคืน --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row ">
+                            <label class="col-sm-3 col-form-label">วันที่เข้ารับของ :</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="pick_up_date" name="pick_up_date" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row hide-driver">
+                            <label class="col-sm-3 col-form-label">คนขับรถ :</label>
+                            <div class="col-sm-9">
+                                @*<input class="form-control " id="driver_name" name="driver_name" type="text" value="">*@
+                                <select class="form-control" id="driver_id" name="driver_id" data-width="100%">
+                                    <option value="">-- เลือกคนขับรถ --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row d-none" id="parent_drv">
+                            <label class="col-sm-3 col-form-label">คนขับรถคนนอก</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="driver_free" name="driver_free" type="text" value="">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group form-group-sm row ">
+                            <label class="col-sm-3 col-form-label">สถานะสินค้า :</label>
+                            <div class="col-sm-9 item_condition">
+                                <input class="col-sm-2" type="radio" id="item_good" name="item_condition" value="1">
+                                <label for="good">สมบูรณ์</label><br>
+                                <input class="col-sm-2" type="radio" id="item_bad" name="item_condition" value="2">
+                                <label for="bad">ไม่สมบูรณ์</label><br>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row job_status_edit d-none">
+                            <label class="col-sm-3 col-form-label">สถานะ : </label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="job_status_edit" name="job_status_edit">
+                                    <option value="receive">Receive</option>
+                                    <option value="complete">Complete </option>
+                                    <option value="rejected">Rejected </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row ">
+                            <label class="col-sm-3 col-form-label">หมายเหตุ :</label>
+                            <div class="col-sm-9">
+                                <input class="form-control " id="pick_up_remark" name="pick_up_remark" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm row remark_trp">
+                            <label class="col-sm-3 col-form-label">หมายเหตุ ขนส่ง :</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="cn_pre_job_remark_trp" name="cn_pre_job_remark_trp" type="text" value="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-save_exit" class="btn ripple btn-primary btn-save_form" data-action="save_exit" type="submit">Save</button>
+                        @*<button id="btn-save_new" class="btn ripple btn-success btn-save_form" data-action="save_new"  type="submit">Save & New</button>*@
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Scroll with content modal -->
+</form>

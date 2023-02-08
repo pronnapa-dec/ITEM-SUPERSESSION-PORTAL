@@ -1,0 +1,194 @@
+﻿<div class="tab-pane" id="saleinfo">
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8 col-xl-8 col-xs-8 col-sm-8">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลพนักงานขายและการขายทั่วไป
+                            </div>
+                            <div class="row row-sm mg-t-20 mg-b-10">
+                                <div class="col-lg col-lg-3">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Code</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salecode" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-7">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Name</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salename" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตารางส่วนลด</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="emmas_named" style="margin-top: -3px;">
+                                </div>
+                                @*<div class="col-lg col-lg-3">
+                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Store Manager</label>
+                <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_storemanager" style="margin-top: -3px;">
+            </div>*@
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Store Manager</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_storemanager" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Channel</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salechannel" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Branch</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_branch" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Group</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salegroup" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Area</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_area" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Area</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salearea" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 col-xl-4 col-xs-4 col-sm-4">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                &nbsp;
+                            </div>
+                            <div class="row row-sm mg-t-20 mg-b-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Manager</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salemanager" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Supervisor</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salesupervisor" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Representative</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salerepresentative" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Support Supervisor</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salesupportsupervisor" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Part Specialist</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_salesupport" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row mg-t-10">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลเป้าการขาย
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg-1">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เป้าหมายปี</label>
+                                </div>
+                                <div class="col-lg-2">
+                                    <select class="form-control form-control-sm select2" id="saletarget_year">
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มกราคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m01" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กุมภาพันธ์</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m02" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มีนาคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m03" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เมษายน</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m04" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤษภาคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m05" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มิถุนายน</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m06" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กรกฎาคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m07" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สิงหาคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m08" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กันยายน</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m09" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตุลาคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m10" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤศจิกายน</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m11" style="margin-top: -3px;">
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ธันวาคม</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m12" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,172 @@
+﻿<div class="col-12 col-sm-12">
+    <div class="card">
+        <div class="card-header pb-0">
+            <h5 class="card-title mb-0 pb-0">@ViewData["Content-Title-Page"]</h5>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" id="frm_search" name="frm_search" autocomplete="off">
+                <div class="kt-portlet__body">
+                    <div class="form-group form-group-sm row d-flex justify-content-center">
+                        <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Cus No. or Customer Name" type="text"> <span class="input-group-btn"><button class="btn btn-primary" type="submit"><span class="input-group-btn"><i class="fa fa-search"></i></span></button></span>
+                            </div><!-- input-group -->
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="border-top my-3"></div>
+            <div class="breadcrumb-header justify-content-between">
+                <div class="card-header pb-0">
+                    <h5 class="card-title mb-0 pb-0">รายละเอียดลูกค้า</h5>
+                </div>
+                <div class="d-flex my-xl-auto right-content">
+                    <h5 class="card-title mb-0 pb-0">ONL/ISR/CPS</h5>
+                </div>
+            </div>
+            <div class="border-top my-3"></div>
+                <form class="form-horizontal" id="frm_search" name="frm_search" autocomplete="off">
+                    <div class="kt-portlet__body">
+                        <div class="form-group form-group-sm row">
+                            <label class="col-md-2 col-form-label" align="right">Zone</label>
+                            <div class="col-md-4">
+                                <select class="form-control  select2 zone" id="zone" name="zone" style="width: 100%;" required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                            <label class="col-md-2 col-form-label" align="right">พื่นที่</label>
+                            <div class="col-md-4">
+                                <select class="form-control  select2 route" id="route" name="route" style="width: 100%;" required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="form-group form-group-sm row">
+                            <label class="col-md-2 col-form-label" align="right">ชื่อขนส่ง</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="name_transprot" name="name_transprot" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-sm row bootstrap-timepicker">
+                            <label class="col-md-2 col-form-label" align="right">เวลาทำการ</label>
+                            <div class="col-md-4">
+                                <input id="opening_time" type="text" class="form-control event-time-from" name="event-time-from" data-provide="timepicker" placeholder="HH:MM">
+                            </div>
+                            <label class="col-md-2 col-form-label" align="right">ถึง</label>
+                            <div class="col-md-4">
+                                <input id="close_time" type="text" class="form-control event-time-from" name="event-time-from" data-provide="timepicker" placeholder="HH:MM">
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-sm row">
+                            <label class="col-md-2 col-form-label" align="right">หมายเหตุ</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" id="remark" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2" align="right">
+                                    <label class="form-label">สถานะ</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="rdiobox"><input type="radio" id="record_status_1" class="record_status" name="rdio" value="1"> <span class="tx-success">ใช้งาน</span></label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="rdiobox"><input type="radio" id="record_status_2" class="record_status" name="rdio" value="0" checked=""> <span class="tx-danger">ไม่ใช้งาน</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="breadcrumb-header justify-content-between">
+                        <div class="card-header pb-0">
+                            <h5 class="card-title mb-0 pb-0">ที่อยู่จัดส่ง</h5>
+                        </div>
+                        <div class="d-flex my-xl-auto right-content">
+                            @*<h5 class="card-title mb-0 pb-0">ONL/ISR/CPS</h5>*@
+                        </div>
+                    </div>
+                    <div class="border-top my-3"></div>
+
+                    <div class="kt-portlet__body">
+                        <div class="form-group form-group-sm row">
+                            <label class="col-md-2 col-form-label" align="right">Zone</label>
+                            <div class="col-md-4">
+                                <select class="form-control  select2 zone" id="zone" name="zone" style="width: 100%;" required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                            <label class="col-md-2 col-form-label" align="right">พื่นที่</label>
+                            <div class="col-md-4">
+                                <select class="form-control  select2 route" id="route" name="route" style="width: 100%;" required>
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="form-group form-group-sm row">
+                            <label class="col-md-2 col-form-label" align="right">ชื่อขนส่ง</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="name_transprot" name="name_transprot" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-sm row bootstrap-timepicker">
+                            <label class="col-md-2 col-form-label" align="right">เวลาทำการ</label>
+                            <div class="col-md-4">
+                                <input id="opening_time" type="text" class="form-control event-time-from" name="event-time-from" data-provide="timepicker" placeholder="HH:MM">
+                            </div>
+                            <label class="col-md-2 col-form-label" align="right">ถึง</label>
+                            <div class="col-md-4">
+                                <input id="close_time" type="text" class="form-control event-time-from" name="event-time-from" data-provide="timepicker" placeholder="HH:MM">
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-sm row">
+                            <label class="col-md-2 col-form-label" align="right">หมายเหตุ</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" id="remark" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2" align="right">
+                                    <label class="form-label">สถานะ</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="rdiobox"><input type="radio" id="record_status_1" class="record_status" name="rdio" value="1"> <span class="tx-success">ใช้งาน</span></label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="rdiobox"><input type="radio" id="record_status_2" class="record_status" name="rdio" value="0" checked=""> <span class="tx-danger">ไม่ใช้งาน</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="form-group form-group-sm row d-flex justify-content-center">
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <button id="btn-item_create" type="submit" class="btn btn-success btn-with-icon btn-block">ADD +</button>
+                                </div><!-- input-group -->
+                            </div>
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <button id="btn-item" type="reset" class="btn btn-light btn-with-icon btn-block">Cancle</button>
+                                </div><!-- input-group -->
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+                <div class="border-top my-3"></div>
+                <div class="table-responsive mg-t-20">
+                    <table id="tbl-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap"></table>
+                </div>
+            </div>
+        </div>
+</div>

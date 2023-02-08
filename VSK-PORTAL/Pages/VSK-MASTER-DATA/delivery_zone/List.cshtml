@@ -1,0 +1,47 @@
+﻿<div class="col-12 col-sm-12">
+    <div class="card">
+        <div class="card-header pb-0">
+            <h5 class="card-title mb-0 pb-0">ข้อมูลบริษัทขนส่งเอกชนแยกตามพื้นที่ </h5>
+        </div>
+        <div class="card-body">
+
+            <form class="form-horizontal" id="frm_search" name="frm_search" autocomplete="off">
+                <div class="row row-sm mg-t-15">
+                    <div class="col-lg">
+                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สายส่ง (Route)</label>
+                        <select class="form-control select2 route" id="emmas_eline_search" name="emmas_eline_search" style="width: 100%;">
+                            <option label="Choose one">
+                            </option>
+                        </select>
+                    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                    <div class="col-lg">
+                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สายส่งย่อย (Sub Route)</label>
+                        <select class="form-control select2 subroute" id="salegrch_delivery_subroute_search" name="salegrch_delivery_subroute_search" style="width: 100%;">
+                            <option label="Choose one">
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-lg">
+                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ชื่อบริษัทขนส่งเอกชน</label>
+                        <input class="form-control " placeholder="ชื่อบริษัทขนส่งเอกชน" type="text" id="name_transprot_search" style="margin-top: -3px;">
+                    </div>
+                </div>
+
+                <div class="row row-sm mg-t-15">
+                </div>
+
+                <div class="form-group mb-0 mt-3 justify-content-end" align="right">
+                    <div align="right">
+                        <button type="submit" class="btn btn-primary" >Search</button>
+                        <button type="reset" class="btn btn-secondary clear_btn" >Cancel</button>
+                        @*<button type="button" id="btn-export" class="btn btn-success">&nbsp;&nbsp;Export&nbsp;&nbsp;</button>&nbsp;*@
+                    </div>
+                </div>
+            </form>
+            <div class="border-top my-3"></div>
+            <div class="table-responsive mg-t-20">
+                <table id="tbl-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="1250px"></table>
+            </div>
+        </div>
+    </div>
+</div>

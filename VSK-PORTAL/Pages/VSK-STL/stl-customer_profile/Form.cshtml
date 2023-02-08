@@ -1,0 +1,615 @@
+﻿<!-- Scroll with content modal -->
+<form id="frm_data" name="frm_data" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_data" data-keyboard="false" data-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:1250px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">@ViewData["Content-Title-Page"] Form</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary tabs-style-2">
+                        <div class=" tab-menu-heading">
+                            <div class="tabs-menu1">
+                                <!-- Tabs -->
+                                <ul class="nav panel-tabs main-nav-line">
+                                    <li><a href="#customerinfo" class="nav-link active" data-toggle="tab">ข้อมูลลูกค้า</a></li>
+                                    <li><a href="#saleinfo" class="nav-link" data-toggle="tab">ข้อมูลด้านการขาย</a></li>
+                                    <li><a href="#accountinfo" class="nav-link" data-toggle="tab">ข้อมูลด้านบัญชีและการเงิน</a></li>
+                                    <li><a href="#deliveryinfo" class="nav-link" data-toggle="tab">ข้อมูลด้านการขนส่ง</a></li>
+                                    <li><a href="#contactinfo" class="nav-link" data-toggle="tab">ข้อมูลการติดต่อ</a></li>
+                                    @*<li><a href="#customer_remark" class="nav-link" data-toggle="tab">บันทึกประวัติลูกค้า</a></li>*@
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body tabs-menu-body main-content-body-right border">
+                            <div class="tab-content">
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/customerinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/saleinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/accountinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/deliveryinfo.cshtml" />
+                                <partial name="~/Pages/VSK-STL/stl-customer_profile/tab/contactinfo.cshtml" />
+                                @*<partial name="~/Pages/VSK-STL/stl-customer_profile/tab/customerremark.cshtml" />*@
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button id="btn-save_exit" class="btn ripple btn-primary btn-save_form" data-action="save_exit" type="submit">Save</button>
+                        <button id="btn-save_new" class="btn ripple btn-success btn-save_form d-none" data-action="save_new" type="submit">Save & New</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Scroll with content modal -->
+</form>
+
+<form id="frm_search" name="frm_search" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-frm_search" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:1250px;">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">Advanced Search</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="font-size: 12px;">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card card-primary">
+                                <div class="card-header pb-0">
+                                    <span class="card-title mb-0 pb-0">Basic Information</span>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_code1" class="col-form-label tx-left form-label">Product Definition - ชื่อกลุ่มสินค้า:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_code1">
+                                            <select class="form-control form-control-sm select2-sm select2_condb" id="search_item_code1" name="search_item_code1" style="width: 100%;" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_code3" class="col-form-label tx-left form-label">Brand Name - ยี่ห้อสินค้า:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_code3">
+                                            <select class="form-control form-control-sm select2-sm select2_condb" id="search_item_code3" name="search_item_code3" style="width: 100%;" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_carmodel" class="col-form-label tx-left form-label">Car Model:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_carmodel">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_carmodel" name="search_item_carmodel" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_carbrand" class="col-form-label tx-left form-label">Car Brand:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_carbrand">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_carbrand" name="search_item_carbrand" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-sm-6">
+                            <div class="card card-primary">
+                                <div class="card-header pb-0">
+                                    <span class="card-title mb-0 pb-0">Detail Information</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_productdivision">Product Division:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_productdivision">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_productdivision" name="search_item_productdivision" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_maincategory">Main Category:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_maincategory">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_maincategory" name="search_item_maincategory" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_subcategory">Sub Category:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_subcategory">
+                                            <select class="form-control form-control-sm select2 select2_notcondb" id="search_item_subcategory" name="search_item_subcategory" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_stockstatus">Stock Status:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_stockstatus">
+                                            <select class="form-control form-control-sm select2 select2-sm select2_notcondb" id="search_item_stockstatus" name="search_item_stockstatus" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mg-t-10">
+                                        <div class="col-sm-12">
+                                            <label for="search_item_skufocus">SKU Focus:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 sel2 div_search_item_skufocus">
+                                            <select class="form-control form-control-sm select2 select2-sm" id="search_item_skufocus" name="search_item_skufocus" style="width: 100%;" role="combobox" multiple="multiple">
+                                                <option value="">Please select..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="font-size: 14px;">
+                    <div class="form-group mb-0 justify-content-end">
+                        <div>
+                            <button type="submit" class="btn btn-primary mg-r-10">Search</button>
+                            <button type="reset" id="btn_reset" name="btn_reset" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<!-- start edit kung 2021-12-24 -->
+<div id="contact" name="contact" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-addcontact" data-keyboard="false" data-backdrop="static" style="height: 600px !important;">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document" style="max-width:480px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">เพิ่มรายชื่อผู้ติดต่อ</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <form id="frm_addcontact">
+                    <div class="modal-body">
+                        <div class="form-group row mg-t-15">
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;หมายเลขโทรศัพท์<span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" placeholder="Contact number" type="text" id="contact_number" style="margin-top: -3px;" required data-parsley-error-message="Contact number">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;เบอร์ต่อภายใน</label>
+                            </div>
+                            <div class="col-md-8 ">
+                                <input class="form-control" placeholder="Extension" type="text" id="contact_extension" style="margin-top: -3px;">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;ชื่อผู้ติดต่อ</label>
+                            </div>
+                            <div class="col-md-8 ">
+                                <input class="form-control" placeholder="Extension" type="text" id="contact_name" style="margin-top: -3px;">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;สำหรับติดต่อ<span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control select2" id="contact_purpose_code" name="Purpose_code" data-width="100%" required data-parsley-error-message="Please Select Purpose">
+                                    <option lebel="Select Purpose"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row purpose_desc d-none">
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;สำหรับติดต่อ(เพิ่มเติม)</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" placeholder="Purpose_Description" type="text" id="contact_purpose_desc" style="margin-top: -3px;">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;หมายเหตุ</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" placeholder="Description" type="text" id="contact_description" style="margin-top: -3px;">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-save-contactinfo" class="btn ripple btn-primary " data-action="save_exit" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary btn-save_form" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Scroll with content modal -->
+    </div>
+</div>
+<!-- end edit kung 2021-12-24 -->
+@*start kung edit เพิ่มกรอก สายส่ง, สายส่งย่อย*@
+<div id="addr_modal" name="addr_modal" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-addr" data-keyboard="false" data-backdrop="static" style="height: 600px !important;">
+        <div class="modal-dialog " role="document" style="max-width:700px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">ที่อยู่จัดส่ง</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <form id="frm_customer">
+                    <div class="modal-body">
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">ชื่อสถานที่จัดส่ง <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" placeholder="ชื่อสถานที่จัดส่ง" type="text" id="emmasaddr_location_name" style="margin-top: -3px;" required data-parsley-error-message="ที่อยู่">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">ที่อยู่ <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" placeholder="ที่อยู่" type="text" id="emmasaddr_eaddress" style="margin-top: -3px;" required data-parsley-error-message="ที่อยู่">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">จังหวัด <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-9 ">
+                                    <select class="form-control select2 province" id="emmasaddr_eprovinc" name="emmasaddr_eprovinc" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกจังหวัด">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">เขต/อำเภอ <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select class="form-control  select2 amphur" id="emmasaddr_eamphur" name="emmasaddr_eamphur" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกอำเภอ">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">แขวง/ตำบล <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select class="form-control  select2 district" id="emmasaddr_etumbol" name="emmasaddr_etumbol" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกตำบล">
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">รหัสไปรษณีย์ <span class="tx-danger">*</span></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="emmasaddr_ezip" name="emmasaddr_ezip" required data-parsley-error-message="กรุณากรอกรหัสไปษณีย์">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="tx-13 tx-medium tx-gray-700">เรื่มต้น</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="main-toggle-group-demo" style="padding: 0.375rem 0.75rem;">
+                                        <div class="main-toggle main-toggle-success default-switches">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-item-create" class="btn ripple btn-primary btn-save-addr" data-action="save_exit" type="submit">Save</button>
+                        <button id="btn-edit" class="btn ripple btn-primary btn-save-addr d-none" data-action="save_exit" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Scroll with content modal -->
+    </div>
+</div>
+@*end kung edit เพิ่มกรอก สายส่ง, สายส่งย่อย*@
+
+
+<div class="modal fade" id="trpModal" tabindex="-1" role="dialog" aria-labelledby="trpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" style="max-height: 600px !important;max-width:950px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="trpModalLabel">บริษัทเอกชน</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="frm_trans" name="frm_trans" autocomplete="off">
+                    <div class="card-body">
+                        <div class="form-group form-group-sm row d-flex justify-content-center row">
+                            <div class="col-md-6 eline">
+                                <label class="tx-13 tx-medium tx-gray-700">สายส่ง</label>
+                                <select class="form-control  select2 emmas_eline" id="emmas_eline" name="emmas_eline" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกสายส่ง">
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 transport_name">
+                                <label class="tx-13 tx-medium tx-gray-700">บริษัทขนส่ง</label>
+                                <select class="form-control  select2 tran_name" id="tran_name" name="tran_name" style="width: 100%;" required data-parsley-error-message="กรุณาเลือกบริษัทขนส่ง">
+                                    <option value="">Please select..</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-sm row d-flex justify-content-center row">
+                            <div class="col-sm-4">
+                                <label class="tx-13 tx-medium tx-gray-700">วิธีการชำระค่าขนส่ง</label>
+                                <div class="row">
+                                    <div class="col-form-label col-6">
+                                        <label class="rdiobox"><input type="radio" id="lov_deliverycost_code_1" class="lov_deliverycost_code col-form-label" name="rdio" value="1"> <span class="tx-success">ชำระเงินต้นทาง</span></label>
+                                    </div>
+                                    <div class="col-form-label col-6">
+                                        <label class="rdiobox"><input type="radio" id="lov_deliverycost_code_2" class="lov_deliverycost_code col-form-label" name="rdio" value="0" checked=""> <span class="tx-danger">ชำระเงินปลายทาง</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="tx-13 tx-medium tx-gray-700">กำหนดเป็นบริษัทขนส่งเรื่มต้น</label>
+                                <div class="main-toggle-group-demo" style="padding: 0.375rem 0;">
+                                    <div class="main-toggle main-toggle-success default-switches">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+
+                    <div class="form-group form-group-sm row d-flex justify-content-center">
+                        <div class="col-2">
+                            <div class="input-group btn-create-trp">
+                                <button id="btn-item-trp-create" type="submit" class="btn btn-success btn-with-icon btn-block">ADD +</button>
+                            </div><!-- input-group -->
+                            <div class="input-group btn-edit-trp hide">
+                                <button id="btn-edit-trp" type="submit" class="btn btn-success btn-with-icon btn-block">Edit</button>
+                            </div><!-- input-group -->
+
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <button id="btn-item-trp-cancle" type="reset" class="btn btn-light btn-with-icon btn-block">Cancel</button>
+                            </div><!-- input-group -->
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="border-top my-3"></div>
+                <div class="table-responsive mg-t-20" style="overflow: hidden;">
+                    <table id="tbl-trp-list" class="table table-bordered table-striped table-hover mg-b-0 text-md-nowrap" width="100%"></table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                @*<button type="button" class="btn btn-primary">Send message</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*start som-o edit เพิ่มข้อมูลผู้มีอำนาจหรือเจ้าของกิจการ 2022/02/17*@
+<div id="owner_modal" name="owner_modal" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-owner" data-keyboard="false" data-backdrop="static" style="height: 600px !important;">
+        <div class="modal-dialog " role="document" style="max-width:450px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">ข้อมูลผู้มีอำนาจหรือเจ้าของกิจการ</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <form id="frm_owner">
+                    <div class="modal-body">
+                        <div class="form-group mg-t-20 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">ชื่อผู้มีอำนาจหรือเจ้าของกิจการ<span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="row">
+                                <input class="form-control" placeholder="ชื่อผู้มีอำนาจหรือเจ้าของกิจการ" type="text" id="customer_owner_name" style="margin-top: -3px;" required data-parsley-error-message="ชื่อผู้มีอำนาจ">
+                            </div>
+                        </div>
+
+                        <div class="form-group mg-t-15 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">หมายเลขบัตรประชาชนผู้มีอำนาจหรือเจ้าของกิจการ</label>
+                            </div>
+                            <div class="row">
+                                <input class="form-control" placeholder="หมายเลขบัตรประชาชนผู้มีอำนาจหรือเจ้าของกิจการ" type="text" id="customer_owner_idno" style="margin-top: -3px;" data-parsley-error-message="หมายเลขบัตรประชาชน">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        @*<button id="btn-save-contactinfo" class="btn ripple btn-primary " data-action="save_exit" type="submit">Save</button>
+                            <button class="btn ripple btn-secondary btn-save_form" data-dismiss="modal" type="button">Close</button>*@
+
+                        <button id="btn-owner-create" class="btn ripple btn-primary btn-save-owner" data-action="save_exit" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+
+                        @*<button id="btn-owner-create" class="btn ripple btn-primary btn-save-owner" data-action="save_exit" type="submit">Add</button>
+                            <button id="btn-owner-edit" class="btn ripple btn-primary btn-save-owner d-none" data-action="save_exit" type="submit">Save</button>
+                            <button class="btn ripple btn-secondary btn-save_form" data-dismiss="modal" type="button">Close</button>*@
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Scroll with content modal -->
+    </div>
+</div>
+@*end som-o edit เพิ่มข้อมูลผู้มีอำนาจหรือเจ้าของกิจการ 2022/02/17*@
+
+@*start som-o edit เพิ่มข้อมูลบัญชีธนาคารของลูกค้า 2022/02/20*@
+<div id="bankaccount_modal" name="bankaccount_modal" autocomplete="off">
+    <div class="modal effect-flip-vertical" id="modal-bankaccount" data-keyboard="false" data-backdrop="static" style="height: 750px !important;">
+        <div class="modal-dialog " role="document" style="max-width:500px">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">ข้อมูลบัญชีธนาคารของลูกค้า</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <form id="frm_bankaccount">
+                    <div class="modal-body">
+                        <div class="form-group mg-t-10 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">ธนาคาร<span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="row">
+                                <select class="form-control select2 customer_bac_bank" id="customer_bac_bank" name="customer_bac_bank" style="width: 100%;" required data-parsley-error-message="ธนาคาร">
+                                    <option value="">Please select..</option>
+                                </select>
+                                @*<input class="form-control" placeholder="ชื่อธนาคาร" type="text" id="customer_bac_bank" style="margin-top: -3px;" required data-parsley-error-message="ธนาคาร">*@
+                            </div>
+                        </div>
+
+                        <div class="form-group mg-t-15 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">ชื่อบัญชีธนาคาร<span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="row">
+                                <input class="form-control" placeholder="ชื่อบัญชีธนาคาร" type="text" id="customer_bac_bankname" style="margin-top: -3px;" data-parsley-error-message="ชื่อบัญชีธนาคาร">
+                            </div>
+                        </div>
+
+                        <div class="form-group mg-t-15 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">เลขที่บัญชีธนาคาร<span class="tx-danger">*</span></label>
+                            </div>
+                            <div class="row">
+                                <input class="form-control" placeholder="เลขที่บัญชีธนาคาร" type="text" id="customer_bac_bankno" style="margin-top: -3px;" data-parsley-error-message="เลขที่บัญชีธนาคาร">
+                            </div>
+                        </div>
+
+                        <div class="form-group mg-t-15 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">ประเภทบัญชีธนาคาร</label>
+                            </div>
+                            <div class="row">
+                                <select class="form-control select2 customer_bac_type" id="customer_bac_type" name="customer_bac_type" style="width: 100%;" data-parsley-error-message="ประเภทบัญชีธนาคาร">
+                                    <option value="">Please select..</option>
+                                </select>
+                                @*<input class="form-control" placeholder="ประเภทบัญชีธนาคาร" type="text" id="customer_bac_type" style="margin-top: -3px;" data-parsley-error-message="ประเภทบัญชีธนาคาร">*@
+                            </div>
+                        </div>
+
+                        <div class="form-group mg-t-15 mg-l-25 mg-r-25">
+                            <div class="row">
+                                <label class="tx-13 tx-medium tx-gray-700">หมายเหตุ</label>
+                            </div>
+                            <div class="row">
+                                <input class="form-control" placeholder="หมายเหตุ" type="text" id="customer_bac_comment" style="margin-top: -3px;" data-parsley-error-message="หมายเหตุ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        @*<button id="btn-save-contactinfo" class="btn ripple btn-primary " data-action="save_exit" type="submit">Save</button>
+                            <button class="btn ripple btn-secondary btn-save_form" data-dismiss="modal" type="button">Close</button>*@
+
+                        <button id="btn-bankaccount-create" class="btn ripple btn-primary btn-save_bankaccount" data-action="save_exit" type="submit">Save</button>
+                        <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+
+                        @*<button id="btn-owner-create" class="btn ripple btn-primary btn-save-owner" data-action="save_exit" type="submit">Add</button>
+                            <button id="btn-owner-edit" class="btn ripple btn-primary btn-save-owner d-none" data-action="save_exit" type="submit">Save</button>
+                            <button class="btn ripple btn-secondary btn-save_form" data-dismiss="modal" type="button">Close</button>*@
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Scroll with content modal -->
+    </div>
+</div>
+@*end som-o edit เพิ่มข้อมูลบัญชีธนาคารของลูกค้า 2022/02/20*@
+
+<!--End Scroll with content modal -->

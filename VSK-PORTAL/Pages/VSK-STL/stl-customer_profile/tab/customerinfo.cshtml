@@ -1,0 +1,288 @@
+﻿<div class="tab-pane active" id="customerinfo">
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลลูกค้า
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg col-lg-4">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">รหัสลูกค้า</label>
+                                    <input class="form-control form-control-sm" placeholder="รหัสลูกค้า" type="text" id="emmas_code" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-2">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Rank</label>
+                                    <input class="form-control form-control-sm" placeholder="Rank" type="text" id="salegrch_grouprank" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-2 mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สาขาที่</label>
+                                    <input class="form-control form-control-sm" placeholder="สาขาที่" type="text" id="emmas_ebranch" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-4 mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">วันที่เปิดหัวลูกค้า</label>
+                                    <input class="form-control form-control-sm" placeholder="วันที่เปิดหัวลูกค้า" type="text" id="emmas_ebgservice" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg col-lg-9">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ชื่อลูกค้า</label>
+                                    <input class="form-control form-control-sm" placeholder="ชื่อลูกค้า" type="text" id="emmas_lname" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-3">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">อักษรย่อ</label>
+                                    <input class="form-control form-control-sm" placeholder="อักษรย่อ" type="text" id="emmas_ecodechr" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">โทรศัพท์</label>
+                                    <input class="form-control form-control-sm" placeholder="โทรศัพท์" type="text" id="emmas_etel" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ผู้ติดต่อ</label>
+                                    <input class="form-control form-control-sm" placeholder="ผู้ติดต่อ" type="text" id="emmas_etran" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">แฟกซ์</label>
+                                    <input class="form-control form-control-sm" placeholder="แฟกซ์" type="text" id="emmas_efax" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">บันทึกข้อมูลลูกค้า</label>
+                                    <textarea class="form-control form-control-sm" placeholder="บันทึกข้อมูลลูกค้า" id="emmas_edescript" rows="4" style="margin-top: -3px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลลูกค้า (นิติบุคคล)
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">วันที่จดทะเบียนบริษัท</label>
+                                    @*<input class="form-control form-control-sm" placeholder="วันที่จดทะเบียนบริษัท" type="text" id="emmas_eregdate" style="margin-top: -3px;">*@
+                                    <input type="text" class="form-control form-control-sm date-picker" style="margin-top: -3px;" id="emmas_eregdate" name="emmas_eregdate" value="">
+                                </div>
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ทุนจดทะเบียน</label>
+                                    <input class="form-control form-control-sm" placeholder="ทุนจดทะเบียน" type="text" id="emmas_eOwn3" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-lg mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">รายการธนาคารของลูกค้า</label>
+                                    @*<input class="form-control form-control-sm" placeholder="ทุนจดทะเบียน" type="text" id="emmas_eOwn3" style="margin-top: -3px;">*@
+                                    @*<select class="form-control form-control-sm" style="margin-top: -3px;" name="salegrch_banklist" id="salegrch_banklist" multiple required></select>*@
+                                    <select class="form-control select2 salegrch_banklist" id="salegrch_banklist" name="salegrch_banklist" style="width: 100%;max-height: 200px;" required data-parsley-error-message="ธนาคาร" multiple>
+                                        <option value="">Please select..</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-25">
+                                <div class="col-md col-md-9 main-content-label mg-t-15 tx-14">
+                                    ข้อมูลผู้มีอำนาจหรือเจ้าของกิจการ
+                                </div>
+                                <div class="col-md col-md-3 main-content-label mg-b-5 tx-14">
+                                    <button type="button" class="col-sm-12 btn btn-sm btn-primary btn-with-icon btn-block" id="btn_addowner" data-toggle="modal" data-target="#modal-owner">เพิ่มข้อมูลผู้มีอำนาจ</button>
+                                </div>
+
+                            </div>
+                            @*<div class="row row-sm mg-t-15">
+            <div class="col-lg">
+                <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ผู้มีอํานาจลงนาม</label>
+                <input class="form-control form-control-sm" placeholder="ผู้มีอํานาจลงนาม" type="text" id="emmas_eOwn0" style="margin-top: -3px;">
+            </div>
+            <div class="col-lg mg-t-10 mg-lg-t-0">
+                <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมายเลขบัตรประชาชนเจ้าของกิจการ</label>
+                <input class="form-control form-control-sm" placeholder="หมายเลขบัตรประชาชนเจ้าของกิจการ" type="text" id="salegrch_idcardno" style="margin-top: -3px;">
+            </div>
+        </div>*@
+                            <div class="row row-sm mg-t-15">
+                                <div class="col-lg-12" id="frm-owner-info">
+
+                                </div>
+                                <div id="frm-owner-info-show" class="d-none col-lg-12">
+                                    <div class="row row-sm">
+                                        <div class="col-lg col-lg-6">
+                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ชื่อผู้มีอำนาจ</label>
+                                            <input class="form-control form-control-sm" placeholder="Contact number" type="text" id="" style="margin-top: -3px;" readonly>
+                                        </div>
+                                        <div class="col-lg col-lg-5">
+                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมายเลขบัตรประชาชน</label>
+                                            <input class="form-control form-control-sm" placeholder="Extension" type="text" id="" style="margin-top: -3px;" readonly>
+                                        </div>
+                                        <div class="col-lg col-lg-1"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row mg-t-10">
+        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ที่อยู่ลูกค้าหรือบริษัท
+                            </div>
+
+                            @*<div class="row row-sm mg-t-20">
+                                    <div class="col-lg">
+                                        <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ที่อยู่บริษัท</label>
+                                        <input class="form-control form-control-sm" placeholder="ที่อยู่บริษัท" type="text" id="emmas_eaddress" style="margin-top: -3px;">
+                                    </div>
+                                </div>*@
+
+                            @*start som-o edit - แก้ไขที่อยู่ให้เก็บข้อมูลแยก เลขที่ / หมู่ / หมู่บ้าน / ซอย / ถนน (2022/02/17)*@
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-4">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เลขที่</label>
+                                    <input class="form-control form-control-lg" placeholder="เลขที่" type="text" id="salegrch_customer_houseno" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-2">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมู่</label>
+                                    <input class="form-control form-control-lg" placeholder="หมู่" type="text" id="salegrch_customer_villageno" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-6">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมู่บ้าน</label>
+                                    <input class="form-control form-control-lg" placeholder="หมู่บ้าน" type="text" id="salegrch_customer_village" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-4">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ซอย</label>
+                                    <input class="form-control form-control-lg" placeholder="ซอย" type="text" id="salegrch_customer_lane" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-8">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ถนน</label>
+                                    <input class="form-control form-control-lg" placeholder="ถนน" type="text" id="salegrch_customer_streetname" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            @*start kung edit แก้ไขที่อยู่ให้เรียง จากใหญ่ไปน้อย และเป็น Dropdown ที่สามารถ Search ได้ (2021/01/14)*@
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-6">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">จังหวัด</label>
+                                    <select class="form-control select2 province" id="emmas_eprovinc" name="emmas_eprovinc" style="width: 100%; margin-top: -3px;">
+                                        <option label="Choose one">
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-6 mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เขต/อำเภอ</label>
+                                    <select class="form-control select2 amphur" id="emmas_eamphur" name="emmas_eamphur" style="margin-top: -3px;" @*required data-parsley-error-message="กรุณาเลือกจังหวัด"*@>
+                                        <option label="Choose one">
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-6">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">แขวง/ตำบล</label>
+                                    <select class="form-control select2 district" id="emmas_etumbol" name="emmas_etumbol" style="margin-top: -3px;" @*required data-parsley-error-message="กรุณาเลือกจังหวัด"*@>
+                                        <option label="Choose one">
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-6 mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">รหัสไปรษณีย์</label>
+                                    <input class="form-control " placeholder="รหัสไปรษณีย์" type="text" id="emmas_ezip" @*style="margin-top: -3px;" kung edit 2022/01/21*@>
+                                </div>
+                            </div>
+                            @*end kung edit แก้ไขที่อยู่ให้เรียง จากใหญ่ไปน้อย และเป็น Dropdown ที่สามารถ Search ได้ (2022/01/14)*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-6 col-xs-6 col-sm-6">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ที่อยู่ลูกค้าตามภูมิลำเนา
+                            </div>
+
+                            @*start som-o edit - แก้ไขที่อยู่ให้เก็บข้อมูลแยก เลขที่ / หมู่ / หมู่บ้าน / ซอย / ถนน (2022/02/17)*@
+                            <div class="row row-sm mg-t-20">
+                                <div class="col-4">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เลขที่</label>
+                                    <input class="form-control form-control-lg" placeholder="เลขที่" type="text" id="salegrch_customer_houseno2" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-2">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมู่</label>
+                                    <input class="form-control form-control-lg" placeholder="หมู่" type="text" id="salegrch_customer_villageno2" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-6">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">หมู่บ้าน</label>
+                                    <input class="form-control form-control-lg" placeholder="หมู่บ้าน" type="text" id="salegrch_customer_village2" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-4">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ซอย</label>
+                                    <input class="form-control form-control-lg" placeholder="ซอย" type="text" id="salegrch_customer_lane2" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-8">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ถนน</label>
+                                    <input class="form-control form-control-lg" placeholder="ถนน" type="text" id="salegrch_customer_streetname2" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            @*start kung edit แก้ไขที่อยู่ให้เรียง จากใหญ่ไปน้อย และเป็น Dropdown ที่สามารถ Search ได้ (2022/01/17)*@
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-6">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">จังหวัด</label>
+                                    <select class="form-control select2 province" id="salegrch_eprovinc2" name="salegrch_eprovinc2" @*style="margin-top: -3px;" required data-parsley-error-message="กรุณาเลือกจังหวัด"*@>
+                                        <option label="Choose one">
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-6 mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เขต/อำเภอ</label>
+                                    <select class="form-control select2 amphur" id="salegrch_eamphur2" name="salegrch_eamphur2" @*style="margin-top: -3px;" required data-parsley-error-message="กรุณาเลือกจังหวัด"*@>
+                                        <option label="Choose one">
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10">
+                                <div class="col">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">แขวง/ตำบล</label>
+                                    <select class="form-control select2 district" id="salegrch_etumbol2" name="salegrch_etumbol2" @*style="margin-top: -3px;" required data-parsley-error-message="กรุณาเลือกจังหวัด"*@>
+                                        <option label="Choose one">
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col mg-t-10 mg-lg-t-0">
+                                    <label class="main-content-label tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">รหัสไปรษณีย์</label>
+                                    <input class="form-control" placeholder="รหัสไปรษณีย์" type="text" id="salegrch_ezip2"> @*kung edit 2022/01/21*@
+                                </div>
+                            </div>
+                            @*end kung edit แก้ไขที่อยู่ให้เรียง จากใหญ่ไปน้อย และเป็น Dropdown ที่สามารถ Search ได้ (2022/01/17)*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,736 @@
+﻿<div class="tab-pane" id="saleinfo">
+    <div class="row mg-t-20">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8 col-xl-8 col-xs-8 col-sm-8">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลพนักงานขายและการขายทั่วไป
+                            </div>
+                            <div class="row row-sm mg-t-20 mg-b-10">
+                                <div class="col-lg col-lg-3">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Code</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salecode" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg col-lg-7">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Name</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salename" style="margin-top: -3px;">
+                                </div>
+                                @*<div class="col-lg col-lg-2">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตารางส่วนลด</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="text" id="emmas_egdis" style="margin-top: -3px;">
+                                    </div>*@
+                                @*<div class="col-lg col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Store Manager</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="text" id="salegrch_storemanager" style="margin-top: -3px;">
+                                    </div>*@
+                            </div>
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Store Manager</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="storemanager" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Channel</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salechannel" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Branch</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="branch" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Group</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salegroup" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Area</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="area" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Area</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salearea" style="margin-top: -3px;">
+                                </div>
+                            </div>
+
+
+                            <div class="row row-sm mg-t-10">
+                                <div class="col-lg-4">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตารางส่วนลด</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="emmas_named" style="margin-top: -3px;">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตารางราคา NET</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="emmas_netprice" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 col-xl-4 col-xs-4 col-sm-4">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                &nbsp;
+                            </div>
+                            <div class="row row-sm mg-t-20 mg-b-20">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Manager</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salemanager" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Supervisor</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salesupervisor" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Representative</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="saleexecutive" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Sale Support Supervisor</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="salesupervisorsupport" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                            <div class="row row-sm mg-t-10 mg-b-10">
+                                <div class="col-lg">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">Part Specialist</label>
+                                    <input class="form-control form-control-sm" placeholder="" type="text" id="partspecialist" style="margin-top: -3px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row mg-t-10">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                            <div class="main-content-label mg-b-5 tx-14">
+                                ข้อมูลเป้าการขาย
+                            </div>
+                            <div class="row row-sm mg-t-25">
+                                <div class="col-lg-1">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เป้าหมายปี</label>
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <select class="form-control form-control-sm select2" id="saletarget_year">
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-1">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย (Y)</label>
+                                    <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;" id="salesactual_year">48,000,000<span class="tx-10 ml-2" id="saletarget_year">/ 40,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right" id="salesactual_per_year">(120%)</span></h5>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย Rebates (Y)</label>
+                                    <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;" id="rebatesactual_year">48,000,000<span class="tx-10 ml-2" id="rebatestarget_year">/ 40,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right" id="rebatesactual_per_year">(120%)</span></h5>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row row-sm mg-t-30">
+                                @*QUARTER 1 - START*@
+                                <div class="col-md-3 col-xl-3 col-xs-3 col-sm-3">
+                                    <div class="card card-primary">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                                                    <div class="main-content-label mg-b-5 tx-14">
+                                                        ไตรมาส 1
+                                                    </div>
+                                                    <div class="row row-sm mg-t-20">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;" id="salesactual_q1">12,000,000<span class="tx-10 ml-2" id="salestarget_year">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right" id="salesactual_per_year">(120%)</span></h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย Rebates (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;" id="rebatesactual_q1">12,000,000<span class="tx-10 ml-2" id="rebatestarget_year">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right" id="rebatesactual_per_year">(120%)</span></h5>
+                                                            <input class="form-control form-control-sm" placeholder="ระบุเป้าหมาย Rebates" type="number" step=1 id="rebatestarget_q1" style="margin-top: 0px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row row-sm mg-t-25">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มกราคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m01" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m01">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กุมภาพันธ์</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m02" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m02">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มีนาคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m03" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m03">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+
+                                                    @*<div class="row row-sm mg-t-25">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มกราคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m01" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กุมภาพันธ์</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m02" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มีนาคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m03" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*QUARTER 1 END*@
+
+
+                                @*QUARTER 2 - START*@
+                                <div class="col-md-3 col-xl-3 col-xs-3 col-sm-3">
+                                    <div class="card card-primary">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                                                    <div class="main-content-label mg-b-5 tx-14">
+                                                        ไตรมาส 2
+                                                    </div>
+                                                    <div class="row row-sm mg-t-20">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย Rebates (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></h5>
+                                                            <input class="form-control form-control-sm" placeholder="ระบุเป้าหมาย Rebates" type="number" step=1 id="rebatestarget_q2" style="margin-top: 0px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row row-sm mg-t-25">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เมษายน</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m04" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m04">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤษภาคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m05" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m05">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มิถุนายน</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m06" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m06">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+
+                                                    @*<div class="row row-sm mg-t-25">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เมษายน</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m04" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤษภาคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m05" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มิถุนายน</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m06" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*QUARTER 2 END*@
+
+
+                                @*QUARTER 3 - START*@
+                                <div class="col-md-3 col-xl-3 col-xs-3 col-sm-3">
+                                    <div class="card card-primary">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                                                    <div class="main-content-label mg-b-5 tx-14">
+                                                        ไตรมาส 3
+                                                    </div>
+                                                    <div class="row row-sm mg-t-20">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย Rebates (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></h5>
+                                                            <input class="form-control form-control-sm" placeholder="ระบุเป้าหมาย Rebates" type="number" step=1 id="rebatestarget_q3" style="margin-top: 0px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row row-sm mg-t-25">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กรกฎาคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m07" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m07">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สิงหาคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m08" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m08">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กันยายน</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m09" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m09">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+
+                                                    @*<div class="row row-sm mg-t-25">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กรกฎาคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m07" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สิงหาคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m08" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กันยายน</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m09" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*QUARTER 3 END*@
+
+
+                                @*QUARTER 4 - START*@
+                                <div class="col-md-3 col-xl-3 col-xs-3 col-sm-3">
+                                    <div class="card card-primary">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+                                                    <div class="main-content-label mg-b-5 tx-14">
+                                                        ไตรมาส 4
+                                                    </div>
+                                                    <div class="row row-sm mg-t-20">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-12">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 0px;">ยอดขายต่อเป้าหมาย Rebates (Q)</label>
+                                                            <h5 class="mb-1 font-weight-bold" style="margin-top: -5px;">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></h5>
+                                                            <input class="form-control form-control-sm" placeholder="ระบุเป้าหมาย Rebates" type="number" step=1 id="rebatestarget_q4" style="margin-top: 0px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row row-sm mg-t-25">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตุลาคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m10" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m10">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤศจิกายน</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m11" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m11">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-sm mg-t-10">
+                                                        <div class="col-lg-4">
+                                                            <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ธันวาคม</label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m12" style="margin-top: -3px;">
+                                                        </div>
+                                                        <div class="col-lg-12 tx-right">
+                                                            <span class="tx-10 ml-2" id="sales_m12">4,000,000 / 3,500,000</span><span class="text-success tx-10 ml-2 tx-bold tx-right">(114.28%)</span>
+                                                        </div>
+                                                    </div>
+
+
+                                                    @*<div class="row row-sm mg-t-25">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตุลาคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m10" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤศจิกายน</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m11" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-sm mg-t-10">
+                                                            <div class="col-lg-12">
+                                                                <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ธันวาคม</label>
+                                                                <h6 class="mb-1 font-weight-bold" style="margin-top: -5px;">4,000,000<span class="tx-10 ml-2">/ 3,500,000</span><span class="text-success tx-13 ml-2 tx-bold tx-right">(114.28%)</span></h6>
+                                                                <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m12" style="margin-top: -3px;">
+                                                            </div>
+                                                        </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*QUARTER 4 END*@
+                            </div>
+
+
+
+                            @*<div class="row row-sm mg-t-25">
+                                    <table style="width: 100%;" border="0">
+                                        <tr>
+                                            <td>
+                                                <div style="margin: 0px 8px 0px 8px;" class="card-chart bg-primary-transparent brround mt-0">
+                                                    <h4 class="tx-primary" style="margin-left: 1px;">Q1</h4>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-1 font-weight-bold">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span></h5>
+                                                <p class="mb-2 tx-12 text-muted">Sales Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                <table border="0">
+                                                    <tr>
+                                                        <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                        <td><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="rebatestarget_q01" style="margin-top: 0px;max-width: 140px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <p class="mb-2 tx-12 text-muted">Rebates Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+
+
+
+                                            <td>
+                                                <div style="margin: 0px 8px 0px 8px;" class="card-chart bg-primary-transparent brround mt-0">
+                                                    <h4 class="tx-primary" style="margin-left: 1px;">Q2</h4>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-1 font-weight-bold">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span></h5>
+                                                <p class="mb-2 tx-12 text-muted">Sales Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                <table border="0">
+                                                    <tr>
+                                                        <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                        <td><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="rebatestarget_q01" style="margin-top: 0px;max-width: 140px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <p class="mb-2 tx-12 text-muted">Rebates Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+
+
+
+                                            <td>
+                                                <div style="margin: 0px 8px 0px 8px;" class="card-chart bg-primary-transparent brround mt-0">
+                                                    <h4 class="tx-primary" style="margin-left: 1px;">Q3</h4>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-1 font-weight-bold">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span></h5>
+                                                <p class="mb-2 tx-12 text-muted">Sales Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                <table border="0">
+                                                    <tr>
+                                                        <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                        <td><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="rebatestarget_q01" style="margin-top: 0px;max-width: 140px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <p class="mb-2 tx-12 text-muted">Rebates Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+
+
+
+                                            <td>
+                                                <div style="margin: 0px 8px 0px 8px;" class="card-chart bg-primary-transparent brround mt-0">
+                                                    <h4 class="tx-primary" style="margin-left: 1px;">Q4</h4>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-1 font-weight-bold">12,000,000<span class="tx-10 ml-2">/ 10,00,000</span></h5>
+                                                <p class="mb-2 tx-12 text-muted">Sales Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                <table border="0">
+                                                    <tr>
+                                                        <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                        <td><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="rebatestarget_q01" style="margin-top: 0px;max-width: 140px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <p class="mb-2 tx-12 text-muted">Rebates Target <span class="text-success tx-13 ml-2 tx-bold tx-right">(120%)</span></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>*@
+
+
+                            @*<div class="row row-sm mg-t-10">
+                                    <div class="col-lg-3">
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มกราคม</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 50%;text-align: right;"><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                <td style="width: 45%;"><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m01" style="margin-top: -3px;max-width: 150px;"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เมษายน</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                <td><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m04" style="margin-top: -3px;max-width: 150px;"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กรกฎาคม</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                <td><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m07" style="margin-top: -3px;max-width: 150px;"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตุลาคม</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><h5 class="mb-1 font-weight-bold">12,000,000/</h5></td>
+                                                <td style=""><input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m10" style="margin-top: -3px;max-width: 150px;"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </div>*@
+
+
+
+                            @*<div class="row row-sm mg-t-10">
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มกราคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m01" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">เมษายน</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m04" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กรกฎาคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m07" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ตุลาคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m10" style="margin-top: -3px;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row row-sm mg-t-5">
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กุมภาพันธ์</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m02" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤษภาคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m05" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">สิงหาคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m08" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">พฤศจิกายน</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m11" style="margin-top: -3px;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row row-sm mg-t-5">
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มีนาคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m03" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">มิถุนายน</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m06" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">กันยายน</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m09" style="margin-top: -3px;">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <label class="tx-13 tx-medium tx-gray-700" style="padding-left: 5px;">ธันวาคม</label>
+                                        <input class="form-control form-control-sm" placeholder="" type="number" step=1 id="saletarget_m12" style="margin-top: -3px;">
+                                    </div>
+
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

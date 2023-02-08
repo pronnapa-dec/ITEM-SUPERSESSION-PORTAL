@@ -1,0 +1,120 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;
+}
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MIS_PORTAL</title>
+    <base href="~/" />
+
+    <!-- Title -->
+    <title> Valex -  Premium dashboard ui bootstrap rwd admin html5 template </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+    <link href="lib/fontawesome/css/all.css" rel="stylesheet" />
+
+    <!--- Style css-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-dark.css" rel="stylesheet">
+
+
+</head>
+<body class="main-body">
+
+    <!-- Page Begin -->
+    <div class="page">
+
+        <!-- Loader -->
+        <div id="global-loader">
+            <img src="~/assets/img/loader.svg" class="loader-img" alt="Loader">
+        </div>
+        <!-- /Loader -->
+
+
+    </div>
+
+    <!-- Page End -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <link href="lib/fontawesome/css/all.min.css" rel="stylesheet" />
+
+    <!-- Firebase -->
+    <script src="lib/firebase/firebase-app.js"></script>
+    <script src="lib/firebase/firebase-auth.js"></script>
+    <script src="lib/firebase/firebase-analytics.js"></script>
+    <script src="lib/firebase/firebase-firestore.js"></script>
+    <script src="lib/firebase/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+    <script src="lib/firebase/firebase-init.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Moment js -->
+    <script src="assets/plugins/moment/moment.js"></script>
+
+    <!-- Apps -->
+    <script src="~/lib/init-plugins.js"></script>
+    <script type="text/javascript">
+
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            if (user) {
+
+                window.location.assign('./home');
+
+            } else {
+
+                window.location.assign('./login');
+
+            }
+
+            $('#btn-signout').click(function (e) {
+
+                e.preventDefault();
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You have been logged out!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Logout!'
+                }).then((result) => {
+                    if (result.value) {
+                        firebase.auth().signOut().then(function () {
+
+                            localStorage.clear();
+
+                            window.location.assign('./login');
+
+                        }).catch(function (error) {
+                            // An error happened.
+                        });
+                    }
+                })
+
+            });
+
+        });
+     
+    </script>
+
+</body>
+</html>
